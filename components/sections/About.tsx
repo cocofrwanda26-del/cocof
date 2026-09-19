@@ -15,7 +15,7 @@ export default function About() {
             ref={ref}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: "easeOut" as any }}
           >
             <h2
               className="text-3xl md:text-4xl font-bold text-ink mb-6 leading-tight"
@@ -34,7 +34,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" as any }}
             className="w-full aspect-[4/3] bg-[#F3F7FC] rounded flex items-center justify-center border border-black/5"
           >
             <span className="text-muted/50 text-sm font-semibold tracking-widest uppercase">

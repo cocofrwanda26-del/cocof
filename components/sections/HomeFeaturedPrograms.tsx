@@ -41,13 +41,6 @@ export default function HomeFeaturedPrograms() {
               Our Programs
             </h2>
           </div>
-          <Link
-            href="/programs"
-            className="hidden md:inline-flex items-center gap-2 text-[#0F2B5B] font-bold text-sm hover:text-[#E8B01C] transition-colors group"
-          >
-            Explore All Programs
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </motion.div>
 
         {/* Cards — horizontal scroll on mobile, grid on desktop */}
@@ -130,20 +123,29 @@ export default function HomeFeaturedPrograms() {
           ))}
         </motion.div>
 
-        {/* Mobile CTA */}
+        {/* Universal Yellow Card CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-8 text-center md:hidden"
+          className="mt-12 flex justify-center"
         >
           <Link
             href="/programs"
-            className="inline-flex items-center justify-center gap-2 bg-[#E8B01C] text-black px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#D4A017] transition-all shadow-[0_0_20px_rgba(232,176,28,0.2)]"
+            className="flex items-center justify-between w-full max-w-3xl bg-[#E8B01C] p-6 md:p-8 rounded-3xl hover:scale-[1.02] transition-transform duration-300 shadow-xl shadow-[#E8B01C]/30 group"
           >
-            Explore All Programs
-            <ArrowRight className="w-4 h-4" />
+            <div className="text-left pr-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-black mb-2" style={{ fontFamily: "var(--font-fraunces)" }}>
+                Explore All Programs
+              </h3>
+              <p className="text-black/80 text-sm md:text-base font-medium">
+                Discover our full range of 6 strategic pillars driving sustainable change across Rwanda.
+              </p>
+            </div>
+            <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center shrink-0 group-hover:bg-white transition-colors">
+              <ArrowRight className="text-[#E8B01C] w-6 h-6 group-hover:text-black transition-colors" />
+            </div>
           </Link>
         </motion.div>
       </div>

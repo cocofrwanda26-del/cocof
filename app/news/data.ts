@@ -18,6 +18,7 @@ export const blogs = [
     date: "September 15, 2026",
     category: "Community Impact",
     excerpt: "Join us for an exclusive meet and greet with the COCOF team. Discover our latest projects and learn how you can get involved in our upcoming initiatives.",
+    readTime: "3 min read",
     imageUrl: "/wemen.webp",
     content: "Join us for an exclusive meet and greet with the COCOF team. Discover our latest projects and learn how you can get involved in our upcoming initiatives.\n\nDuring this event, you'll have the opportunity to speak directly with our program directors, hear success stories from the communities we serve, and network with other passionate supporters.\n\nWe look forward to seeing you there and building a stronger community together!"
   },
@@ -27,6 +28,7 @@ export const blogs = [
     date: "September 02, 2026",
     category: "Sustainability",
     excerpt: "As the dry season approaches, implementing efficient water management techniques becomes crucial for community resilience and food security.",
+    readTime: "4 min read",
     imageUrl: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop",
     content: "As the dry season approaches, implementing efficient water management techniques becomes crucial for community resilience and food security. Our latest workshops have focused on rainwater harvesting, drip irrigation, and soil moisture conservation techniques that significantly reduce water waste while maintaining crop yields."
   },
@@ -36,6 +38,7 @@ export const blogs = [
     date: "August 28, 2026",
     category: "Events",
     excerpt: "A recap of our annual Youth Leadership Summit, where young minds gathered to discuss actionable solutions for climate change.",
+    readTime: "3 min read",
     imageUrl: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=800&auto=format&fit=crop",
     content: "A recap of our annual Youth Leadership Summit, where young minds gathered to discuss actionable solutions for climate change. Over 200 participants from various regions came together for three days of intensive workshops, inspiring keynote speeches, and collaborative project planning sessions."
   }

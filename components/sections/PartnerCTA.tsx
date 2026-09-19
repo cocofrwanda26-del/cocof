@@ -58,7 +58,7 @@ export default function PartnerCTA() {
           {/* Image (order-2 on mobile, order-2 on desktop) */}
           <div className="w-full md:w-1/2 relative min-h-[250px] md:min-h-full order-2 md:order-2">
             <Image
-              src="/por.webp"
+              src="/ndaz.webp"
               alt="Partner with COCOF"
               fill
               className="object-cover object-center"
