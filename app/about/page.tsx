@@ -42,7 +42,7 @@ export default function AboutPage() {
   ];
 
   const boardTeam = [
-    { name: "Mathilde MUKARUGERO", title: "Board Member", intro: "Providing strategic oversight and upholding COCOF's core values at the highest governance level." },
+    { name: "Mathilde MUKARUGERO", title: "President and legal representative", intro: "Providing strategic oversight and upholding COCOF's core values at the highest governance level." },
     { name: "Clémentine ABAMARIYA", title: "Board Member", intro: "Championing women's rights and shaping long-term strategies for community transformation." }
   ];
 
@@ -97,9 +97,9 @@ export default function AboutPage() {
                 className="absolute inset-0 rounded-[32px] overflow-hidden shadow-[0_20px_60px_rgba(47,107,58,0.15)] z-10 border-4 border-white"
                 initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 1, ease: "easeOut" as any }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Image src="/mere.webp" alt="Rwandan Women" fill quality={100} unoptimized priority className="object-cover" />
+                <Image src="/hero.webp" alt="Rwandan Women" fill quality={100} unoptimized priority className="object-cover" />
               </motion.div>
               {/* Solid Floating Accent Card */}
               <motion.div 
@@ -272,7 +272,7 @@ export default function AboutPage() {
 
           <div>
             <h3 className="text-xl font-black tracking-widest text-[#2F6B3A] uppercase mb-10 flex items-center gap-4 justify-end text-right">
-              Board of Directors <div className="w-8 h-1 bg-[#2F6B3A]" />
+              Executive Committee <div className="w-8 h-1 bg-[#2F6B3A]" />
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:max-w-4xl ml-auto">
               {boardTeam.map((leader, index) => (

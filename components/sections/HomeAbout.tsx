@@ -45,7 +45,7 @@ export default function HomeAbout() {
           >
             <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-2xl shadow-black/10 border border-black/5">
               <Image
-                src="/mother.webp"
+                src="/soya.png"
                 alt="Rural mother in Rwanda"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-1000"
@@ -80,10 +80,10 @@ export default function HomeAbout() {
               </h2>
             </div>
             
-            <p className="text-base text-black mb-5 leading-relaxed font-medium">
+            <p className="text-base text-black mb-5 leading-relaxed font-medium text-justify">
               Established in 1994 by rural women, COCOF is an accredited NGO dedicated to building a Rwanda where women and men attain equal rights.
             </p>
-            <p className="text-base text-black mb-8 leading-relaxed">
+            <p className="text-base text-black mb-8 leading-relaxed text-justify">
               We empower over 20,000 beneficiaries through climate-smart agriculture, high-value horticulture, and the Gender Action Learning System (GALS). By championing financial inclusion, social enterprises, and youth employment, we drive sustainable economic resilience and community transformation.
             </p>
 
@@ -102,7 +102,7 @@ export default function HomeAbout() {
               className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
               {[
-                { value: "594", label: "Women Members" },
+                { value: "1000+", label: "Women Members" },
                 { value: "20k+", label: "Beneficiaries" },
                 { value: "6", label: "Focus Areas" },
                 { value: "32", label: "Years in Action" }

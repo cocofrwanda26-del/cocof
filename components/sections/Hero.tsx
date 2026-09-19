@@ -68,25 +68,31 @@ export default function Hero() {
 
           {/* Main Headline */}
           <h1
-            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.25] tracking-tight mb-12 md:mb-16 text-white drop-shadow-2xl flex flex-col"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.25] tracking-tight mb-8 sm:mb-12 md:mb-16 text-white drop-shadow-2xl text-center"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            <span>A Rwanda where women and men</span>
-            <span>attain <span className="text-[#E8B01C]">equal rights</span></span>
+            <span className="block sm:hidden">
+              A Rwanda where women<br />
+              and men attain <span className="text-[#E8B01C]">equal rights</span>
+            </span>
+            <span className="hidden sm:block">
+              A Rwanda where women and men<br />
+              attain <span className="text-[#E8B01C]">equal rights</span>
+            </span>
           </h1>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full sm:w-auto">
             <Link
               href="/get-involved"
-              className="inline-flex items-center justify-center bg-[#E8B01C] text-black px-12 py-4 rounded-full font-bold text-lg hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_30px_rgba(232,176,28,0.2)] w-full sm:w-auto"
+              className="inline-flex items-center justify-center bg-[#E8B01C] text-black px-6 py-2 sm:px-12 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_30px_rgba(232,176,28,0.2)] w-full sm:w-auto"
             >
               Get Involved
             </Link>
             
             <Link
-              href="/impact"
-              className="inline-flex items-center justify-center bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-12 py-4 rounded-full font-bold text-lg hover:bg-[#E8B01C]/10 transition-all hover:scale-105 w-full sm:w-auto"
+              href="/impacts"
+              className="inline-flex items-center justify-center bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-6 py-2 sm:px-12 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-[#E8B01C]/10 transition-all hover:scale-105 w-full sm:w-auto"
             >
               See Our Impacts
             </Link>

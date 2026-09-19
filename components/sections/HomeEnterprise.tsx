@@ -61,13 +61,22 @@ export default function HomeEnterprise() {
               ))}
             </div>
             
-            <Link
-              href="/approaches"
-              className="inline-flex items-center gap-3 bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#E8B01C] hover:text-black transition-all group"
-            >
-              Explore More Approaches
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex flex-col gap-4 items-start">
+              <Link
+                href="/industry"
+                className="inline-flex items-center justify-center gap-3 bg-[#E8B01C] text-black px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#D4A017] transition-all group shadow-[0_0_20px_rgba(232,176,28,0.2)]"
+              >
+                Explore Our Industry
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#E8B01C] hover:text-black transition-all group"
+              >
+                Our Delivery Approaches
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </motion.div>
 
           {/* Image */}

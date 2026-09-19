@@ -17,7 +17,7 @@ const contactDetails = [
   {
     iconType: "mail" as const,
     label: "Email Support",
-    lines: ["cocofm18@gmail.com", "cocof_ruyumba@yahoo.fr"],
+    lines: ["cocofm18@gmail.com", "info@cocof.org.rw"],
   },
   {
     iconType: "phone" as const,
