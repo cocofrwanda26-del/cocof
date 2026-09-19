@@ -38,15 +38,15 @@ export default function AboutPage() {
 
 
   const executiveTeam = [
-    { name: "Tharcisse SEMUGAZA", key: "tharcisse" },
-    { name: "Claudine UWITONZE", key: "claudine" },
-    { name: "Cyrille NZIGIYE", key: "cyrille" },
-    { name: "Henriette USANASE", key: "henriette" }
+    { name: "Tharcisse SEMUGAZA", memberKey: "tharcisse" },
+    { name: "Claudine UWITONZE", memberKey: "claudine" },
+    { name: "Cyrille NZIGIYE", memberKey: "cyrille" },
+    { name: "Henriette USANASE", memberKey: "henriette" }
   ];
 
   const boardTeam = [
-    { name: "Mathilde MUKARUGERO", key: "mathilde" },
-    { name: "Clémentine ABAMARIYA", key: "clementine" }
+    { name: "Mathilde MUKARUGERO", memberKey: "mathilde" },
+    { name: "Clémentine ABAMARIYA", memberKey: "clementine" }
   ];
 
   return (
@@ -289,7 +289,7 @@ export default function AboutPage() {
   );
 }
 
-function LeaderCard({ name, key, delay }: { name: string, key: string, delay: number }) {
+function LeaderCard({ name, memberKey, delay }: { name: string, memberKey: string, delay: number }) {
   const t = useTranslations("AboutPage");
   return (
     <motion.div
@@ -314,10 +314,10 @@ function LeaderCard({ name, key, delay }: { name: string, key: string, delay: nu
           {name}
         </h4>
         <p className="text-[10px] font-black text-[#2F6B3A] uppercase tracking-[0.15em] mb-3 pb-3 border-b border-gray-100">
-          {t(`team.${key}.title` as any)}
+          {t(`team.${memberKey}.title` as any)}
         </p>
         <p className="text-[#1A1A1A]/60 text-sm leading-relaxed font-medium mt-auto">
-          {t(`team.${key}.intro` as any)}
+          {t(`team.${memberKey}.intro` as any)}
         </p>
       </div>
     </motion.div>

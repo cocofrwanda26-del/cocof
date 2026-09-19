@@ -38,7 +38,7 @@ export default function Approaches() {
 
             return (
               <div
-                key={approach.title}
+                key={approach.id}
                 className={`flex flex-col md:flex-row gap-8 md:gap-16 items-center ${
                   isEven ? "" : "md:flex-row-reverse"
                 }`}
