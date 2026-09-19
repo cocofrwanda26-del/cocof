@@ -207,11 +207,11 @@ export default function IndustryPage() {
                 Beyond agricultural purchasing, the processing plant itself is a vital engine of local employment. By hiring technicians, operators, and logistics staff directly from the community, we inject steady, reliable salaries into the rural economy.
               </p>
               
-              <div className="flex items-center gap-6 bg-white/5 border border-white/10 p-6 rounded-2xl w-max backdrop-blur-sm">
-                <Briefcase className="w-10 h-10 text-[#E8B01C]" />
+              <div className="flex items-center gap-4 sm:gap-6 bg-white/5 border border-white/10 p-4 sm:p-6 rounded-2xl w-full sm:w-max backdrop-blur-sm">
+                <Briefcase className="w-8 h-8 sm:w-10 sm:h-10 text-[#E8B01C] shrink-0" />
                 <div>
-                  <div className="text-sm text-white/60 font-bold uppercase tracking-wider mb-1">Impact</div>
-                  <div className="text-xl font-bold text-white">Direct & Indirect Employment</div>
+                  <div className="text-xs sm:text-sm text-white/60 font-bold uppercase tracking-wider mb-1">Impact</div>
+                  <div className="text-base sm:text-xl font-bold text-white leading-tight">Direct & Indirect Employment</div>
                 </div>
               </div>
             </div>
