@@ -85,14 +85,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full sm:w-auto">
             <Link
               href="/get-involved"
-              className="inline-flex items-center justify-center bg-[#E8B01C] text-black px-6 py-2 sm:px-12 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_30px_rgba(232,176,28,0.2)] w-1/2 sm:w-auto min-w-[160px]"
+              className="inline-flex items-center justify-center bg-[#E8B01C] text-black px-6 py-3.5 sm:px-12 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_30px_rgba(232,176,28,0.2)] w-1/2 sm:w-auto min-w-[160px]"
             >
               Get Involved
             </Link>
             
             <Link
               href="/impact"
-              className="inline-flex items-center justify-center bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-6 py-2 sm:px-12 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-[#E8B01C]/10 transition-all hover:scale-105 w-1/2 sm:w-auto min-w-[160px]"
+              className="inline-flex items-center justify-center bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-6 py-3.5 sm:px-12 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#E8B01C]/10 transition-all hover:scale-105 w-1/2 sm:w-auto min-w-[160px]"
             >
               See Our Impact
             </Link>
