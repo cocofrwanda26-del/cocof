@@ -6,8 +6,11 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { APPROACHES } from "@/data/approaches";
+import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
+  const t = useTranslations("AboutPage");
+  const tApproaches = useTranslations("ApproachesData");
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [30, -30]);
@@ -35,15 +38,15 @@ export default function AboutPage() {
 
 
   const executiveTeam = [
-    { name: "Tharcisse SEMUGAZA", title: "Executive Secretary", intro: "Leading COCOF's daily operations and strategic vision implementation with decades of experience." },
-    { name: "Claudine UWITONZE", title: "Executive Secretariat", intro: "Driving program execution and community outreach initiatives across our core sectors." },
-    { name: "Cyrille NZIGIYE", title: "Executive Secretariat", intro: "Overseeing financial administration and ensuring stringent internal controls are met." },
-    { name: "Henriette USANASE", title: "Executive Secretariat", intro: "Coordinating stakeholder relations and supporting program delivery at the grassroots level." }
+    { name: "Tharcisse SEMUGAZA", key: "tharcisse" },
+    { name: "Claudine UWITONZE", key: "claudine" },
+    { name: "Cyrille NZIGIYE", key: "cyrille" },
+    { name: "Henriette USANASE", key: "henriette" }
   ];
 
   const boardTeam = [
-    { name: "Mathilde MUKARUGERO", title: "President and legal representative", intro: "Providing strategic oversight and upholding COCOF's core values at the highest governance level." },
-    { name: "Clémentine ABAMARIYA", title: "Board Member", intro: "Championing women's rights and shaping long-term strategies for community transformation." }
+    { name: "Mathilde MUKARUGERO", key: "mathilde" },
+    { name: "Clémentine ABAMARIYA", key: "clementine" }
   ];
 
   return (
@@ -75,9 +78,9 @@ export default function AboutPage() {
                 className="text-[3rem] md:text-[4.5rem] font-bold text-[#1A1A1A] leading-[0.9] tracking-tight mb-5" 
                 style={{ fontFamily: "var(--font-fraunces)" }}
               >
-                Equal <span className="text-[#2F6B3A]">Rights.</span><br/>
-                Real <span className="relative text-[#1E3A8A]">
-                  Impact.
+                {t("heroTitle1")} <br className="hidden md:block"/>
+                <span className="relative text-[#1E3A8A]">
+                  {t("heroTitle2")}
                   <svg className="absolute w-full h-3 -bottom-2 left-0 text-[#1E3A8A]/30" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="4" fill="none"/></svg>
                 </span>
               </motion.h1>
@@ -88,7 +91,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" as any }}
                 className="text-xl text-[#1A1A1A]/70 font-medium leading-snug max-w-2xl border-l-4 border-[#2F6B3A] pl-5"
               >
-                Founded in December 1994 by rural peasant women, we are an accredited NGO fighting to rebuild communities and secure sustainable livelihoods across Rwanda.
+                {t("heroDesc")}
               </motion.p>
             </div>
             
@@ -111,7 +114,7 @@ export default function AboutPage() {
               >
                 <Target className="w-10 h-10 text-white mb-3" />
                 <p className="text-3xl font-black text-white mb-1">30+</p>
-                <p className="text-xs font-bold text-white/70 uppercase tracking-widest">Years of Action</p>
+                <p className="text-xs font-bold text-white/70 uppercase tracking-widest">{t("yearsOfAction")}</p>
               </motion.div>
             </div>
           </div>
@@ -130,10 +133,10 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 w-48 h-48 bg-[#1E3A8A] opacity-5 rounded-bl-full scale-125" />
               <div className="relative z-10 flex flex-col h-full">
                 <h2 className="text-lg font-black tracking-widest text-[#1E3A8A] uppercase mb-4 flex items-center gap-2">
-                  <Eye className="w-5 h-5" /> Our Vision
+                  <Eye className="w-5 h-5" /> {t("ourVision")}
                 </h2>
                 <p className="text-2xl lg:text-3xl font-bold text-[#1A1A1A] leading-tight" style={{ fontFamily: "var(--font-fraunces)" }}>
-                  "A Rwanda where both women and men attain <span className="text-[#1E3A8A]">equal rights.</span>"
+                  {t("visionText")}
                 </p>
               </div>
             </motion.div>
@@ -146,10 +149,10 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 w-48 h-48 bg-white opacity-[0.03] rounded-bl-full scale-125" />
               <div className="relative z-10 flex flex-col h-full">
                 <h2 className="text-lg font-black tracking-widest text-[#F5B400] uppercase mb-4 flex items-center gap-2">
-                  <Target className="w-5 h-5" /> Our Mission
+                  <Target className="w-5 h-5" /> {t("ourMission")}
                 </h2>
                 <p className="text-xl lg:text-2xl font-bold text-white leading-snug" style={{ fontFamily: "var(--font-fraunces)" }}>
-                  To help women achieve economic, social, and political abilities that allow them to enjoy the same rights as men and <span className="text-[#F5B400]">address the problems they face.</span>
+                  {t("missionText")}
                 </p>
               </div>
             </motion.div>
@@ -170,9 +173,9 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mb-6">
                   <Scale className="w-6 h-6 text-[#F5B400]" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-[#F5B400]" style={{ fontFamily: "var(--font-fraunces)" }}>Legal Authority</h3>
+                <h3 className="text-3xl font-bold mb-4 text-[#F5B400]" style={{ fontFamily: "var(--font-fraunces)" }}>{t("legalAuthority")}</h3>
                 <p className="text-white/90 text-lg leading-relaxed font-medium">
-                  Operating with absolute transparency under Rwanda Governance Board (RGB) accreditation (Law No. 058/2024). Our legitimacy is rooted deeply in our history, formally recognized since 2002.
+                  {t("legalAuthDesc")}
                 </p>
               </motion.div>
               
@@ -180,9 +183,9 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#2F6B3A] flex items-center justify-center mb-6 shadow-lg">
                   <Shield className="w-6 h-6 text-[#F5B400]" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-[#F5B400]" style={{ fontFamily: "var(--font-fraunces)" }}>Stringent Governance</h3>
+                <h3 className="text-3xl font-bold mb-4 text-[#F5B400]" style={{ fontFamily: "var(--font-fraunces)" }}>{t("stringentGov")}</h3>
                 <p className="text-white/90 text-lg leading-relaxed font-medium">
-                  A 40-member Supreme Organ, independent Audit Committee, and strict Conflict Resolution frameworks ensure peak fiduciary accountability and strategic execution across our extensive networks (Pro-Femme Twese Hamwe).
+                  {t("stringentGovDesc")}
                 </p>
               </motion.div>
             </div>
@@ -196,12 +199,12 @@ export default function AboutPage() {
           <motion.div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16" {...fadeIn}>
             <div className="max-w-3xl">
               <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A] leading-[1]" style={{ fontFamily: "var(--font-fraunces)" }}>
-                Our Delivery <br/>
-                <span className="text-[#2F6B3A]">Approaches.</span>
+                {t("deliveryApproaches1")} <br/>
+                <span className="text-[#2F6B3A]">{t("deliveryApproaches2")}</span>
               </h2>
             </div>
             <p className="text-lg text-[#1A1A1A]/60 font-semibold max-w-sm md:max-w-md">
-              Proprietary operational frameworks that turn vision into tangible community transformation.
+              {t("deliveryDesc")}
             </p>
           </motion.div>
 
@@ -220,10 +223,10 @@ export default function AboutPage() {
                   {/* Top Image Section */}
                   <div className="relative h-56 w-full bg-[#FAFAFA] overflow-hidden">
                     {approach.image ? (
-                      <Image src={approach.image} alt={approach.title} fill quality={100} unoptimized className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <Image src={approach.image} alt={tApproaches(`${approach.id}.title` as any)} fill quality={100} unoptimized className="object-cover group-hover:scale-105 transition-transform duration-700" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-[#F3F4F6] text-gray-400 group-hover:scale-105 transition-transform duration-700">
-                        <span className="text-xs font-black tracking-widest uppercase">Waiting for Photo</span>
+                        <span className="text-xs font-black tracking-widest uppercase">{t("waitingPhoto")}</span>
                       </div>
                     )}
                   </div>
@@ -231,11 +234,11 @@ export default function AboutPage() {
                   {/* Bottom Content Area */}
                   <div className="flex flex-col flex-grow p-6 md:p-8">
                     <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] mb-4 leading-tight group-hover:text-[#1E3A8A] transition-colors duration-300" style={{ fontFamily: "var(--font-fraunces)" }}>
-                      {approach.title}
+                      {tApproaches(`${approach.id}.title` as any)}
                     </h3>
                     
                     <div className="mt-auto pt-4 flex items-center gap-2 text-[#2F6B3A] font-bold text-xs tracking-widest uppercase group-hover:gap-3 group-hover:text-[#1E3A8A] transition-all duration-300">
-                      Learn more
+                      {t("learnMore")}
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
@@ -251,17 +254,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <motion.div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16" {...fadeIn}>
             <h2 className="text-4xl md:text-5xl font-black text-[#1E3A8A] mb-5" style={{ fontFamily: "var(--font-fraunces)" }}>
-              The Visionaries
+              {t("visionaries")}
             </h2>
             <div className="w-16 h-1.5 bg-[#F5B400] rounded-full mb-6" />
             <p className="text-lg text-[#1A1A1A]/60 font-medium">
-              The resilient minds driving our mission forward.
+              {t("visionariesDesc")}
             </p>
           </motion.div>
 
           <div className="mb-24">
             <h3 className="text-xl font-black tracking-widest text-[#2F6B3A] uppercase mb-10 flex items-center gap-4">
-              <div className="w-8 h-1 bg-[#2F6B3A]" /> Executive Secretariat
+              <div className="w-8 h-1 bg-[#2F6B3A]" /> {t("execSecretariat")}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {executiveTeam.map((leader, index) => (
@@ -272,7 +275,7 @@ export default function AboutPage() {
 
           <div>
             <h3 className="text-xl font-black tracking-widest text-[#2F6B3A] uppercase mb-10 flex items-center gap-4 justify-end text-right">
-              Executive Committee <div className="w-8 h-1 bg-[#2F6B3A]" />
+              {t("execCommittee")} <div className="w-8 h-1 bg-[#2F6B3A]" />
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:max-w-4xl ml-auto">
               {boardTeam.map((leader, index) => (
@@ -286,7 +289,8 @@ export default function AboutPage() {
   );
 }
 
-function LeaderCard({ name, title, intro, delay }: { name: string, title: string, intro: string, delay: number }) {
+function LeaderCard({ name, key, delay }: { name: string, key: string, delay: number }) {
+  const t = useTranslations("AboutPage");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -299,7 +303,7 @@ function LeaderCard({ name, title, intro, delay }: { name: string, title: string
       <div className="relative h-56 md:h-64 w-full rounded-[20px] overflow-hidden bg-[#FAFAFA] mb-5 flex flex-col items-center justify-center border-2 border-transparent group-hover:border-gray-100 transition-all duration-500">
         <div className="px-5 py-2 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100/50">
           <span className="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400 group-hover:text-[#1E3A8A] transition-colors duration-500">
-            Waiting for Photo
+            {t("waitingPhoto")}
           </span>
         </div>
       </div>
@@ -310,10 +314,10 @@ function LeaderCard({ name, title, intro, delay }: { name: string, title: string
           {name}
         </h4>
         <p className="text-[10px] font-black text-[#2F6B3A] uppercase tracking-[0.15em] mb-3 pb-3 border-b border-gray-100">
-          {title}
+          {t(`team.${key}.title` as any)}
         </p>
         <p className="text-[#1A1A1A]/60 text-sm leading-relaxed font-medium mt-auto">
-          {intro}
+          {t(`team.${key}.intro` as any)}
         </p>
       </div>
     </motion.div>

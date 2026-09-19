@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function GetInvolved() {
+  const t = useTranslations("GetInvolved");
   return (
     <section id="get-involved" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -12,29 +14,29 @@ export default function GetInvolved() {
           {/* Text Content */}
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-2 bg-[#1B4B8F]/10 text-[#1B4B8F] rounded-full text-sm font-bold mb-6 tracking-wider uppercase">
-              Get Involved
+              {t("tag")}
             </div>
             <h2 
               className="text-4xl md:text-5xl font-bold text-[#1B4B8F] mb-6 leading-tight"
               style={{ fontFamily: "var(--font-fraunces)" }}
             >
-              Join Our Movement for Lasting Change
+              {t("title")}
             </h2>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              When you stand with us, you empower communities, foster sustainable development, and create a brighter future for generations to come. Your contribution makes an immediate impact. Be the catalyst for the change you wish to see.
+              {t("desc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/donate" 
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-[#1B4B8F] to-[#2a6fd1] hover:shadow-lg hover:shadow-[#1B4B8F]/30 transform hover:-translate-y-1 transition-all duration-300"
               >
-                Donate Now
+                {t("donate")}
               </Link>
               <Link 
                 href="/contact" 
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-[#1B4B8F] bg-white border-2 border-[#1B4B8F] hover:bg-[#1B4B8F] hover:text-white transition-colors duration-300"
               >
-                Contact Us
+                {t("contact")}
               </Link>
             </div>
           </div>
@@ -45,7 +47,7 @@ export default function GetInvolved() {
               <div className="absolute inset-0 bg-[#1B4B8F]/20 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
               <Image 
                 src="/wemen.webp" 
-                alt="Women in public making an impact" 
+                alt={t("imageAlt")} 
                 width={800} 
                 height={600} 
                 className="object-cover w-full h-[400px] md:h-[550px] transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
@@ -58,8 +60,8 @@ export default function GetInvolved() {
                     +
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-gray-900">Make an</p>
-                    <p className="text-[#1B4B8F] font-black">Impact Today</p>
+                    <p className="text-sm font-bold text-gray-900">{t("badgeLine1")}</p>
+                    <p className="text-[#1B4B8F] font-black">{t("badgeLine2")}</p>
                   </div>
                 </div>
               </div>

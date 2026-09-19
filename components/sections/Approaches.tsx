@@ -3,39 +3,21 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Coins, Percent, Landmark, Users, Factory } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const approaches = [
-  {
-    icon: Coins,
-    title: "SILC (Savings & Internal Lending Communities)",
-    description: "COCOF transitioned communities from the traditional Akagega model to structured SILC groups, formalizing savings and providing a stepping stone to financial independence.",
-  },
-  {
-    icon: Percent,
-    title: "Guarantee Funds — SACCOs",
-    description: "Members access loans at a preferential 8% interest rate through SACCOs (Kaduha, Jyambere Kamonyi) — significantly down from the standard 24%.",
-    callout: { from: "24%", to: "8%" },
-  },
-  {
-    icon: Landmark,
-    title: "Guarantee Funds — CLECAM",
-    description: "Members secure a competitive 12% interest rate through CLECAM branches in Ejoheza Muhanga and Kamonyi, empowering them to invest in their enterprises.",
-  },
-  {
-    icon: Users,
-    title: "Gender Action Learning System (GALS)",
-    description: "A cross-cutting approach transforming intra-household dynamics so women participate equally in managing resources and making strategic family decisions.",
-  },
-  {
-    icon: Factory,
-    title: "Muhanga Food Processing Industries",
-    description: "COCOF's own social enterprise, processing local soya and maize to create direct, profitable market linkages for our farmers.",
-  },
+  { id: "silc", icon: Coins },
+  { id: "sacco", icon: Percent, callout: { from: "24%", to: "8%" } },
+  { id: "clecam", icon: Landmark },
+  { id: "gals", icon: Users },
+  { id: "mfpi", icon: Factory },
 ];
 
 export default function Approaches() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const t = useTranslations("Approaches");
+  const aT = useTranslations("ApproachesData");
 
   return (
     <section id="approaches" className="py-24 bg-[#F3F7FC]">
@@ -45,7 +27,7 @@ export default function Approaches() {
             className="text-4xl md:text-5xl font-bold text-ink max-w-2xl mx-auto leading-tight"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Proprietary Models & Approaches
+            {t("title")}
           </h2>
         </div>
 
@@ -72,7 +54,7 @@ export default function Approaches() {
                     className="text-2xl md:text-3xl font-bold text-ink mb-3 leading-snug"
                     style={{ fontFamily: "var(--font-fraunces)" }}
                   >
-                    {approach.title}
+                    {aT(`${approach.id}.title` as any)}
                   </h3>
                 </motion.div>
 
@@ -84,7 +66,7 @@ export default function Approaches() {
                 >
                   <div className="bg-white p-8 rounded border border-black/5">
                     <p className="text-base text-muted leading-relaxed">
-                      {approach.description}
+                      {aT(`${approach.id}.description` as any)}
                     </p>
                     
                     {approach.callout && (

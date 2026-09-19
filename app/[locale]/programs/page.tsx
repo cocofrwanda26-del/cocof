@@ -9,8 +9,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { PROGRAMS, COOPERATIVES } from "@/data/programs";
+import { useTranslations } from "next-intl";
 
 export default function ProgramsPage() {
+  const t = useTranslations("ProgramsPage");
+  const tData = useTranslations("ProgramsData");
   return (
     <main className="min-h-screen bg-[#F3F7FC] pt-28 md:pt-32 pb-16 md:pb-24 selection:bg-[#FFCC00] selection:text-[#0B3019]">
       {/* Header Section */}
@@ -23,13 +26,13 @@ export default function ProgramsPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0B3019]/5 text-[#0B3019] font-bold text-sm mb-6 border border-[#0B3019]/10">
               <Sprout size={16} className="text-[#0B3019]" />
-              Strategic Pillars
+              {t("tag")}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0B3019] mb-4 md:mb-6 tracking-tight leading-tight" style={{ fontFamily: 'var(--font-fraunces)' }}>
-              Our Programs
+              {t("title")}
             </h1>
             <p className="text-lg text-[#5A5A5A] leading-relaxed max-w-2xl">
-              These permanent, overarching domains guide our long-term mission and strategic planning across Rwanda, driving sustainable change from the ground up.
+              {t("desc")}
             </p>
           </motion.div>
         </div>
@@ -70,24 +73,24 @@ export default function ProgramsPage() {
                       {program.num}
                     </span>
                     <span className="text-[10px] md:text-[11px] font-bold text-[#1B4B8F] tracking-[0.2em] uppercase">
-                      {program.category}
+                      {tData(`${program.id}.category` as any)}
                     </span>
                   </div>
                   
                   <h2 className="text-xl sm:text-2xl font-bold text-[#0B3019] mb-4 leading-[1.3]" style={{ fontFamily: 'var(--font-fraunces)' }}>
-                    {program.title}
+                    {tData(`${program.id}.title` as any)}
                   </h2>
                   
                   <div className="flex-1 flex flex-col h-full">
                     <p className="text-[#5A5A5A] text-[15px] sm:text-base leading-relaxed mb-8 flex-1">
-                      {program.shortDesc}
+                      {tData(`${program.id}.shortDesc` as any)}
                     </p>
                     <div className="mt-auto">
                       <Link 
                         href={`/programs/${program.id}`}
                         className="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-[#FFCC00] text-[#0B3019] font-bold rounded-xl shadow-sm hover:shadow-md hover:bg-[#e6b800] transition-all duration-300"
                       >
-                        Explore Program 
+                        {t("explore")} 
                         <ArrowRight size={18} />
                       </Link>
                     </div>
@@ -118,25 +121,25 @@ export default function ProgramsPage() {
             <div>
               <div className="inline-flex items-center gap-2 mb-8 text-[#FFCC00]">
                 <Users size={18} />
-                <span className="font-bold text-xs tracking-[0.2em] uppercase">Community Partnerships</span>
+                <span className="font-bold text-xs tracking-[0.2em] uppercase">{t("coopTag")}</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-[1.15]" style={{ fontFamily: 'var(--font-fraunces)' }}>
-                Cooperatives We Work With
+                {t("coopTitle")}
               </h2>
               <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-6 font-light">
-                COCOF supports five agricultural cooperatives in Kamonyi District involved primarily in maize and soybean production. These cooperatives bring farmers together to improve access to agricultural inputs, technical training, markets, finance, and collective services.
+                {t("coopDesc1")}
               </p>
               <p className="text-white/80 text-lg md:text-xl leading-relaxed font-light">
-                Together, these organized platforms empower farmers—particularly women—to adopt sustainable practices, increase productivity, and improve household food security.
+                {t("coopDesc2")}
               </p>
             </div>
 
             <div>
               <div className="bg-white/5 rounded-[20px] border border-white/10 backdrop-blur-md overflow-hidden">
                 <div className="hidden sm:grid grid-cols-12 gap-4 p-5 md:p-6 bg-white/10 border-b border-white/10 text-xs font-bold text-[#FFCC00] tracking-widest uppercase">
-                  <div className="col-span-2 text-center">No.</div>
-                  <div className="col-span-4">Cooperative</div>
-                  <div className="col-span-6">Main Focus</div>
+                  <div className="col-span-2 text-center">{t("colNo")}</div>
+                  <div className="col-span-4">{t("colCoop")}</div>
+                  <div className="col-span-6">{t("colFocus")}</div>
                 </div>
                 <div className="flex flex-col">
                   {COOPERATIVES.map((coop, index) => (
@@ -153,7 +156,7 @@ export default function ProgramsPage() {
                       </div>
                       <div className="sm:col-span-6 text-white/80 text-sm flex items-center gap-3 font-light">
                         <Sprout size={16} className="text-[#FFCC00] shrink-0" />
-                        {coop.focus}
+                        {t("maizeAndSoybean")}
                       </div>
                     </div>
                   ))}

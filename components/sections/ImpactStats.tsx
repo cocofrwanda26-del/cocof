@@ -3,7 +3,8 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, animate, Variants } from "framer-motion";
 import { Users, Globe, Target, CalendarHeart, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 function AnimatedNumber({ value, suffix = "" }: { value: number, suffix?: string }) {
   const [count, setCount] = useState(1);
@@ -25,15 +26,16 @@ function AnimatedNumber({ value, suffix = "" }: { value: number, suffix?: string
 }
 
 const stats = [
-  { value: 1000, label: "Women Members", suffix: "+", icon: Users, color: "text-[#1B4B8F]", bg: "bg-[#1B4B8F]/10" },
-  { value: 20000, label: "Beneficiaries", suffix: "+", icon: Globe, color: "text-[#12422C]", bg: "bg-[#12422C]/10" },
-  { value: 6, label: "Focus Areas", suffix: "", icon: Target, color: "text-[#0F2B5B]", bg: "bg-[#0F2B5B]/10" },
-  { value: 32, label: "Years in Action", suffix: "", icon: CalendarHeart, color: "text-[#E8B01C]", bg: "bg-[#E8B01C]/20" },
+  { id: "women", value: 1000, suffix: "+", icon: Users, color: "text-[#1B4B8F]", bg: "bg-[#1B4B8F]/10" },
+  { id: "beneficiaries", value: 20000, suffix: "+", icon: Globe, color: "text-[#12422C]", bg: "bg-[#12422C]/10" },
+  { id: "focus", value: 6, suffix: "", icon: Target, color: "text-[#0F2B5B]", bg: "bg-[#0F2B5B]/10" },
+  { id: "years", value: 32, suffix: "", icon: CalendarHeart, color: "text-[#E8B01C]", bg: "bg-[#E8B01C]/20" },
 ];
 
 export default function ImpactStats() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const t = useTranslations("ImpactStats");
 
   const container: Variants = {
     hidden: { opacity: 0 },
@@ -57,14 +59,14 @@ export default function ImpactStats() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-4 mb-4">
             <div className="w-10 h-[2px] bg-[#E8B01C]" />
-            <span className="text-[#12422C] font-bold text-sm tracking-widest uppercase">Our Impact</span>
+            <span className="text-[#12422C] font-bold text-sm tracking-widest uppercase">{t("tag")}</span>
             <div className="w-10 h-[2px] bg-[#E8B01C]" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F2B5B] mb-6" style={{ fontFamily: "var(--font-fraunces)" }}>
-            Measurable Change
+            {t("title")}
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            A snapshot of our results from decades of empowering communities and driving sustainable transformation.
+            {t("desc")}
           </p>
         </div>
 
@@ -77,7 +79,7 @@ export default function ImpactStats() {
         >
           {stats.map((stat) => (
             <motion.div 
-              key={stat.label} 
+              key={stat.id} 
               variants={item}
               className="bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 border border-gray-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300"
             >
@@ -93,7 +95,7 @@ export default function ImpactStats() {
               </div>
               
               <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">
-                {stat.label}
+                {t(`stats.${stat.id}` as any)}
               </span>
             </motion.div>
           ))}

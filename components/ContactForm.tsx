@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface FormData {
   name: string;
@@ -25,6 +26,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const t = useTranslations("ContactForm");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -37,7 +39,17 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       if (onSubmit) {
         await onSubmit(form);
       } else {
-        await new Promise((r) => setTimeout(r, 1000));
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        });
+        
+        if (!response.ok) {
+          throw new Error("Failed to send message");
+        }
       }
       setStatus("sent");
       setForm({ name: "", email: "", subject: "", message: "" });
@@ -51,7 +63,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label className="block text-xs font-semibold tracking-widest text-slate mb-2 uppercase">
-            Name
+            {t("name")}
           </label>
           <input
             type="text"
@@ -59,13 +71,13 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             value={form.name}
             onChange={handleChange}
             required
-            placeholder="Your full name"
+            placeholder={t("namePlaceholder")}
             className={inputStyle}
           />
         </div>
         <div>
           <label className="block text-xs font-semibold tracking-widest text-slate mb-2 uppercase">
-            Email
+            {t("email")}
           </label>
           <input
             type="email"
@@ -73,7 +85,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             value={form.email}
             onChange={handleChange}
             required
-            placeholder="your@email.com"
+            placeholder={t("emailPlaceholder")}
             className={inputStyle}
           />
         </div>
@@ -81,7 +93,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
       <div>
         <label className="block text-xs font-semibold tracking-widest text-slate mb-2 uppercase">
-          Subject
+          {t("subject")}
         </label>
         <input
           type="text"
@@ -89,14 +101,14 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           value={form.subject}
           onChange={handleChange}
           required
-          placeholder="How can we help?"
+          placeholder={t("subjectPlaceholder")}
           className={inputStyle}
         />
       </div>
 
       <div>
         <label className="block text-xs font-semibold tracking-widest text-slate mb-2 uppercase">
-          Message
+          {t("message")}
         </label>
         <textarea
           name="message"
@@ -104,7 +116,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           onChange={handleChange}
           required
           rows={5}
-          placeholder="Tell us about your interest in COCOF's work..."
+          placeholder={t("messagePlaceholder")}
           className={`${inputStyle} resize-none`}
         />
       </div>
@@ -118,17 +130,17 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           boxShadow: status === "sending" ? "none" : "0 8px 20px -8px rgba(27, 75, 143, 0.5)",
         }}
       >
-        {status === "sending" ? "Sending…" : "Send Message"}
+        {status === "sending" ? t("sending") : t("send")}
       </button>
 
       {status === "sent" && (
         <div className="p-4 rounded-xl bg-green-50 border border-green-100 text-sm font-medium text-green-800">
-          ✓ Message sent successfully! We'll be in touch soon.
+          {t("success")}
         </div>
       )}
       {status === "error" && (
         <div className="p-4 rounded-xl bg-red-50 border border-red-100 text-sm font-medium text-red-800">
-          Something went wrong. Please email us directly at cocofm18@gmail.com.
+          {t("error")}
         </div>
       )}
     </form>

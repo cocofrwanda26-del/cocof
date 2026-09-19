@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function HomeAbout() {
+  const t = useTranslations("HomeAbout");
   return (
     <section className="py-16 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -21,7 +23,7 @@ export default function HomeAbout() {
           <div className="inline-flex items-center gap-4 mb-4">
             <div className="w-12 h-[2px] bg-[#E8B01C]" />
             <span className="text-[#12422C] font-bold text-sm tracking-widest uppercase">
-              About Us
+              {t("tag")}
             </span>
             <div className="w-12 h-[2px] bg-[#E8B01C]" />
           </div>
@@ -29,7 +31,7 @@ export default function HomeAbout() {
             className="text-3xl font-bold text-[#0F2B5B] leading-[1.2]"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Driving sustainable economic resilience & community transformation.
+            {t("title")}
           </h2>
         </motion.div>
 
@@ -69,22 +71,22 @@ export default function HomeAbout() {
               <div className="inline-flex items-center gap-4 mb-6">
                 <div className="w-12 h-[2px] bg-[#E8B01C]" />
                 <span className="text-[#12422C] font-bold text-sm tracking-widest uppercase">
-                  About Us
+                  {t("tag")}
                 </span>
               </div>
               <h2 
                 className="text-4xl font-bold text-[#0F2B5B] leading-[1.2]"
                 style={{ fontFamily: "var(--font-fraunces)" }}
               >
-                Driving sustainable economic resilience & community transformation.
+                {t("title")}
               </h2>
             </div>
             
             <p className="text-base text-black mb-5 leading-relaxed font-medium text-justify">
-              Established in 1994 by rural women, COCOF is an accredited NGO dedicated to building a Rwanda where women and men attain equal rights.
+              {t("p1")}
             </p>
             <p className="text-base text-black mb-8 leading-relaxed text-justify">
-              We empower over 20,000 beneficiaries through climate-smart agriculture, high-value horticulture, and the Gender Action Learning System (GALS). By championing financial inclusion, social enterprises, and youth employment, we drive sustainable economic resilience and community transformation.
+              {t("p2")}
             </p>
 
             {/* Statistics */}
@@ -102,10 +104,10 @@ export default function HomeAbout() {
               className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
               {[
-                { value: "1000+", label: "Women Members" },
-                { value: "20k+", label: "Beneficiaries" },
-                { value: "6", label: "Focus Areas" },
-                { value: "32", label: "Years in Action" }
+                { value: "1000+", label: t("stats.women") },
+                { value: "20k+", label: t("stats.beneficiaries") },
+                { value: "6", label: t("stats.focus") },
+                { value: "32", label: t("stats.years") }
               ].map((stat, i) => (
                 <motion.div 
                   key={i}
@@ -129,7 +131,7 @@ export default function HomeAbout() {
               href="/impact"
               className="inline-flex items-center justify-center gap-3 bg-[#E8B01C] text-black px-8 py-3.5 rounded-full font-bold text-base hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_30px_rgba(232,176,28,0.3)]"
             >
-              See Our Impact
+              {t("seeImpact")}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

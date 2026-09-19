@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function PartnerCTA() {
+  const t = useTranslations("PartnerCTA");
   return (
     <section className="bg-white py-10 md:py-16">
       <div className="max-w-5xl mx-auto px-6">
@@ -20,7 +22,7 @@ export default function PartnerCTA() {
           {/* Mobile Title */}
           <div className="md:hidden w-full p-8 pb-0 text-center order-1">
             <h3 className="text-3xl font-bold text-white leading-tight" style={{ fontFamily: "var(--font-fraunces)" }}>
-              Want to Partner with Us?
+              {t("title")}
             </h3>
           </div>
           
@@ -28,11 +30,11 @@ export default function PartnerCTA() {
           <div className="w-full md:w-1/2 p-8 pt-4 md:p-10 lg:p-12 flex flex-col justify-center text-center md:text-left order-3 md:order-1">
             {/* Desktop Title */}
             <h3 className="hidden md:block text-4xl font-bold text-white mb-5 leading-tight" style={{ fontFamily: "var(--font-fraunces)" }}>
-              Want to Partner with Us?
+              {t("title")}
             </h3>
             
             <p className="text-white/80 max-w-lg mx-auto md:mx-0 mb-8 text-base md:text-lg leading-relaxed">
-              We are always looking for new collaborations to expand our impact and empower more communities. Let's work together to make a difference.
+              {t("desc")}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-5 w-full sm:w-auto">
@@ -41,7 +43,7 @@ export default function PartnerCTA() {
                 href="/donate"
                 className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#E8B01C] text-black px-10 py-4 rounded-full font-bold hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_20px_rgba(232,176,28,0.2)]"
               >
-                Donate
+                {t("donate")}
               </Link>
               
               {/* Contact Us Button */}
@@ -49,7 +51,7 @@ export default function PartnerCTA() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-10 py-4 rounded-full font-bold hover:bg-[#E8B01C]/10 transition-all hover:scale-105"
               >
-                Contact Us
+                {t("contact")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { useTranslations } from "next-intl";
 
 function XIcon({ size = 16, color }: { size?: number; color?: string }) {
   return (
@@ -14,27 +15,10 @@ function XIcon({ size = 16, color }: { size?: number; color?: string }) {
 }
 
 const contactDetails = [
-  {
-    iconType: "mail" as const,
-    label: "Email Support",
-    lines: ["cocofm18@gmail.com", "info@cocof.org.rw"],
-  },
-  {
-    iconType: "phone" as const,
-    label: "Direct Lines",
-    lines: ["+250 788 492 119", "+250 788 480 161"],
-  },
-  {
-    iconType: "map" as const,
-    label: "Headquarters",
-    lines: ["Musambira Sector, Kamonyi District", "Southern Province, Rwanda", "B.P. 01 Muhanga"],
-  },
-  {
-    iconType: "x" as const,
-    label: "Twitter / X",
-    lines: ["@cocof_m"],
-    link: "https://x.com/cocof_m",
-  },
+  { id: "mail", iconType: "mail" as const, lines: ["cocofm18@gmail.com", "info@cocof.org.rw"] },
+  { id: "phone", iconType: "phone" as const, lines: ["+250 788 480 161", "+250 722 855 445"] },
+  { id: "map", iconType: "map" as const, isHq: true },
+  { id: "x", iconType: "x" as const, lines: ["@cocof_m"], link: "https://x.com/cocof_m" },
 ];
 
 function ContactIcon({ type, className }: { type: string; className?: string }) {
@@ -48,6 +32,7 @@ function ContactIcon({ type, className }: { type: string; className?: string }) 
 export default function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations("Contact");
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -75,16 +60,16 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-sm font-semibold tracking-[0.2em] uppercase text-primary mb-6">
-              Connect With Us
+              {t("tag")}
             </p>
             <h2
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-ink mb-6"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Let's Start a Conversation
+              {t("title")}
             </h2>
             <p className="text-lg text-muted/90 leading-relaxed">
-              Whether you're a potential partner, donor, researcher, or community member — our doors are always open. We'd love to hear from you.
+              {t("desc")}
             </p>
           </motion.div>
         </div>
@@ -98,9 +83,12 @@ export default function Contact() {
         >
           {/* Contact Details Grid */}
           <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-            {contactDetails.map((d, i) => (
+            {contactDetails.map((d, i) => {
+              const hqLines = d.isHq ? [t("hq.line1"), t("hq.line2"), t("hq.line3")] : undefined;
+              const displayLines = hqLines || d.lines || [];
+              return (
               <motion.div
-                key={d.label}
+                key={d.id}
                 variants={itemVariants}
                 className="group bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-primary/10 relative overflow-hidden"
               >
@@ -115,10 +103,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold tracking-wide text-ink mb-3 uppercase">
-                      {d.label}
+                      {t(`details.${d.id}` as any)}
                     </h4>
                     <div className="space-y-1.5">
-                      {d.lines.map((line) =>
+                      {displayLines.map((line) =>
                         d.link ? (
                           <a
                             key={line}
@@ -139,7 +127,7 @@ export default function Contact() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )})}
           </div>
 
           {/* Form Area */}
@@ -152,9 +140,9 @@ export default function Contact() {
                 className="text-3xl font-bold text-ink mb-3"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Send a Message
+                {t("sendTitle")}
               </h3>
-              <p className="text-muted">Fill out the form below and we'll get back to you promptly.</p>
+              <p className="text-muted">{t("sendDesc")}</p>
             </div>
             <ContactForm />
           </motion.div>

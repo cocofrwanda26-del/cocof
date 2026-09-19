@@ -3,15 +3,18 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight } from "lucide-react";
 import { PROGRAMS } from "@/data/programs";
+import { useTranslations } from "next-intl";
 
 const featured = PROGRAMS.slice(0, 3);
 
 export default function HomeFeaturedPrograms() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const t = useTranslations("HomeFeaturedPrograms");
+  const pT = useTranslations("ProgramsData");
 
   return (
     <section className="py-16 md:py-24 bg-[#F8FAFC] relative overflow-hidden">
@@ -31,14 +34,14 @@ export default function HomeFeaturedPrograms() {
             <div className="inline-flex items-center gap-3 mb-4">
               <div className="w-10 h-[2px] bg-[#E8B01C]" />
               <span className="text-[#12422C] font-bold text-xs tracking-[0.2em] uppercase">
-                What We Do
+                {t("tag")}
               </span>
             </div>
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F2B5B] leading-[1.15] max-w-lg"
               style={{ fontFamily: "var(--font-fraunces)" }}
             >
-              Our Programs
+              {t("title")}
             </h2>
           </div>
         </motion.div>
@@ -95,7 +98,7 @@ export default function HomeFeaturedPrograms() {
                     {/* Category pill */}
                     <div className="absolute bottom-4 left-4">
                       <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-[9px] font-bold tracking-[0.15em] uppercase text-[#0F2B5B] shadow-sm">
-                        {program.category}
+                        {pT(`${program.id}.category` as any)}
                       </span>
                     </div>
                   </div>
@@ -106,14 +109,14 @@ export default function HomeFeaturedPrograms() {
                       className="text-lg font-bold text-[#0F2B5B] mb-3 leading-snug line-clamp-2 group-hover:text-[#1B4B8F] transition-colors"
                       style={{ fontFamily: "var(--font-fraunces)" }}
                     >
-                      {program.title}
+                      {pT(`${program.id}.title` as any)}
                     </h3>
                     <p className="text-sm text-black/60 leading-relaxed line-clamp-3 flex-1">
-                      {program.shortDesc}
+                      {pT(`${program.id}.shortDesc` as any)}
                     </p>
                     {/* Read more indicator */}
                     <div className="mt-5 flex items-center gap-2 text-[#E8B01C] font-bold text-sm">
-                      <span>Learn More</span>
+                      <span>{t("learnMore")}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
@@ -137,10 +140,10 @@ export default function HomeFeaturedPrograms() {
           >
             <div className="text-left pr-6">
               <h3 className="text-2xl md:text-3xl font-bold text-black mb-2" style={{ fontFamily: "var(--font-fraunces)" }}>
-                Explore All Programs
+                {t("exploreAll")}
               </h3>
               <p className="text-black/80 text-sm md:text-base font-medium">
-                Discover our full range of 6 strategic pillars driving sustainable change across Rwanda.
+                {t("exploreDesc")}
               </p>
             </div>
             <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center shrink-0 group-hover:bg-white transition-colors">

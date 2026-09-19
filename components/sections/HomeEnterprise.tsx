@@ -2,16 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-
-const benefits = [
-  "Commercial Aggregation & Bulk Processing",
-  "Strict Grading & Quality Standards",
-  "Guaranteed High-Value Markets for Farmers"
-];
+import { useTranslations } from "next-intl";
 
 export default function HomeEnterprise() {
+  const t = useTranslations("HomeEnterprise");
+  const benefits = t.raw("benefits") as string[];
+
   return (
     <section className="py-20 md:py-28 bg-[#12422C] relative overflow-hidden">
       {/* Abstract Background Elements */}
@@ -30,7 +28,7 @@ export default function HomeEnterprise() {
             <div className="inline-flex items-center gap-3 mb-6">
               <div className="w-10 h-[2px] bg-[#E8B01C]" />
               <span className="text-[#E8B01C] font-bold text-xs tracking-[0.2em] uppercase">
-                Social Enterprise Integration
+                {t("tag")}
               </span>
             </div>
             
@@ -38,11 +36,11 @@ export default function HomeEnterprise() {
               className="text-4xl md:text-5xl font-bold text-white mb-6 leading-[1.15]"
               style={{ fontFamily: "var(--font-fraunces)" }}
             >
-              Muhanga Food Processing Industries
+              {t("title")}
             </h2>
             
             <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
-              COCOF&apos;s own social enterprise. We actively process local soya and maize to create direct, profitable market linkages for our farmers, moving them beyond the low-profit sale of raw materials.
+              {t("desc")}
             </p>
             
             <div className="space-y-4 mb-10">
@@ -66,14 +64,14 @@ export default function HomeEnterprise() {
                 href="/industry"
                 className="inline-flex items-center justify-center gap-3 bg-[#E8B01C] text-black px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#D4A017] transition-all group shadow-[0_0_20px_rgba(232,176,28,0.2)]"
               >
-                Explore Our Industry
+                {t("explore")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#E8B01C] hover:text-black transition-all group"
               >
-                Our Delivery Approaches
+                {t("approaches")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -109,9 +107,9 @@ export default function HomeEnterprise() {
                 <div className="w-12 h-12 bg-[#F2FCF5] rounded-full flex items-center justify-center shrink-0">
                   <span className="text-[#12422C] font-bold text-xl" style={{ fontFamily: "var(--font-fraunces)" }}>100%</span>
                 </div>
-                <span className="text-sm font-bold text-[#0F2B5B] leading-tight">Locally Sourced</span>
+                <span className="text-sm font-bold text-[#0F2B5B] leading-tight">{t("local")}</span>
               </div>
-              <p className="text-xs text-gray-500 font-medium">Guaranteeing high-value markets for rural women.</p>
+              <p className="text-xs text-gray-500 font-medium">{t("localDesc")}</p>
             </motion.div>
           </motion.div>
           

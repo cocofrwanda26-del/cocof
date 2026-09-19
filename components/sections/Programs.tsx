@@ -3,43 +3,21 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Sprout, Users, Briefcase, Landmark, CloudSun, GraduationCap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const programs = [
-  {
-    icon: Landmark,
-    title: "Women's Economic Empowerment",
-    summary: "Expanding access to income-generating activities, savings, and productive assets.",
-  },
-  {
-    icon: Sprout,
-    title: "Sustainable Agriculture & Food Security",
-    summary: "Enhancing crop yields through climate-smart technologies.",
-  },
-  {
-    icon: Briefcase,
-    title: "Cooperative Development & Market Access",
-    summary: "Building governance capacity, processing capacity, and collective contract marketing.",
-  },
-  {
-    icon: Users,
-    title: "Gender Equality & Social Inclusion",
-    summary: "Removing intra-household inequalities, elevating women's decision-making.",
-  },
-  {
-    icon: CloudSun,
-    title: "Climate Resilience",
-    summary: "Rainwater harvesting, agroforestry, soil conservation.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Youth & Community Development",
-    summary: "Market-aligned technical training and entrepreneurship incubators.",
-  },
+  { id: "womens-economic", icon: Landmark },
+  { id: "sustainable-ag", icon: Sprout },
+  { id: "cooperative-dev", icon: Briefcase },
+  { id: "gender-equality", icon: Users },
+  { id: "climate-resilience", icon: CloudSun },
+  { id: "youth-dev", icon: GraduationCap },
 ];
 
 export default function Programs() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const t = useTranslations("Programs");
 
   return (
     <section id="programs" className="py-24 bg-white">
@@ -49,10 +27,10 @@ export default function Programs() {
             className="text-4xl md:text-5xl font-bold text-ink max-w-2xl mx-auto leading-tight mb-4"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Six Pillars of Transformation
+            {t("title")}
           </h2>
           <p className="text-base text-muted max-w-xl mx-auto">
-            Our holistic model for sustainable change across Rwandan communities.
+            {t("desc")}
           </p>
         </div>
 
@@ -67,7 +45,7 @@ export default function Programs() {
             const Icon = program.icon;
             return (
               <motion.div
-                key={program.title}
+                key={program.id}
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
                 className="bg-white rounded p-8 border border-black/5 hover:border-[#1B4B8F]/20 transition-colors"
               >
@@ -76,9 +54,9 @@ export default function Programs() {
                   className="text-lg font-bold text-ink mb-3"
                   style={{ fontFamily: "var(--font-fraunces)" }}
                 >
-                  {program.title}
+                  {t(`items.${program.id}.title` as any)}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed">{program.summary}</p>
+                <p className="text-sm text-muted leading-relaxed">{t(`items.${program.id}.summary` as any)}</p>
               </motion.div>
             );
           })}

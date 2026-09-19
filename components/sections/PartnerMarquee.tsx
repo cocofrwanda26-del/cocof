@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface Partner {
   name: string;
@@ -112,6 +113,7 @@ const partnersData: Partner[] = [
 ];
 
 export default function PartnerMarquee() {
+  const t = useTranslations("PartnerMarquee");
   return (
     <section className="py-16 bg-[#F2FCF5] text-gray-900 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -119,7 +121,7 @@ export default function PartnerMarquee() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px bg-[#12422C]/40 w-10"></div>
             <span className="text-[#12422C] font-semibold text-sm tracking-widest uppercase">
-              Our Partners
+              {t("tag")}
             </span>
           </div>
         </div>

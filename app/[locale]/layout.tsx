@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -21,6 +23,17 @@ export const metadata: Metadata = {
   description:
     "COCOF (Conseil Consultatif des Femmes) is a Rwandan NGO founded in 1994, empowering women through horticulture, gender-transformative programs, financial inclusion, and climate-smart agriculture.",
   keywords: ["COCOF", "Rwanda", "NGO", "women empowerment", "agriculture", "Kamonyi"],
+  icons: {
+    icon: [
+      { url: "/icon/favicon.ico" },
+      { url: "/icon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/icon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/icon/site.webmanifest",
   openGraph: {
     title: "COCOF Rwanda — Women's Advisory Council",
     description:
@@ -30,13 +43,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ 
+  children,
+  params
+}: { 
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={`${fraunces.variable} ${jakarta.variable}`}>
+    <html lang={locale} className={`${fraunces.variable} ${jakarta.variable}`}>
       <body className="min-h-screen antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

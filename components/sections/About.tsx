@@ -2,10 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function About() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const t = useTranslations("About");
 
   return (
     <section id="about" className="py-24 bg-white">
@@ -21,13 +23,11 @@ export default function About() {
               className="text-3xl md:text-4xl font-bold text-ink mb-6 leading-tight"
               style={{ fontFamily: "var(--font-fraunces)" }}
             >
-              Who We Are
+              {t("title")}
             </h2>
-            <p className="text-lg leading-relaxed text-muted mb-6">
-              COCOF — <em>Conseil Consultatif des Femmes</em> — was founded by rural women in Kamonyi District. Over three decades, we have evolved from a grassroots community group into a legally registered NGO, advancing women's rights, economic agency, and food security through collective action.
-            </p>
+            <p className="text-lg leading-relaxed text-muted mb-6" dangerouslySetInnerHTML={{ __html: t.raw("p1") }} />
             <p className="text-base leading-relaxed text-muted">
-              Operating under Law No. 058/2024, our work is driven by values of mutual respect and self-confidence, ensuring Rwandan women hold their rightful place as economic actors and decision-makers.
+              {t("p2")}
             </p>
           </motion.div>
 
@@ -38,7 +38,7 @@ export default function About() {
             className="w-full aspect-[4/3] bg-[#F3F7FC] rounded flex items-center justify-center border border-black/5"
           >
             <span className="text-muted/50 text-sm font-semibold tracking-widest uppercase">
-              Image Placeholder
+              {t("imageAlt")}
             </span>
           </motion.div>
         </div>

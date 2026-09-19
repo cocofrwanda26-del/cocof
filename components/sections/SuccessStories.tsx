@@ -3,49 +3,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const testimonials = [
-  {
-    id: "market",
-    tag: "Agribusiness & Market Access",
-    quote: "Partnering with Muhanga Food Processing Industries gave us a guaranteed commercial market for our bulk harvests. We are no longer farming blindly; we are running a true agribusiness that pays our members fairly.",
-    attribution: "Cooperative Member",
-    location: "COCOF-Supported Cooperative",
-  },
-  {
-    id: "youth",
-    tag: "Youth Livelihoods",
-    quote: "The entrepreneurship training gave me the practical skills to start my own business. Today, I am managing my own horticulture enterprise, securing my own income, and building my future.",
-    attribution: "Youth Agribusiness Entrepreneur",
-    location: "Kamonyi District",
-  },
-  {
-    id: "agronomy",
-    tag: "Sustainable Agriculture",
-    quote: "Learning directly from a certified Maître-Fermier changed how I manage my soil and control pests. My harvest has increased, and my crops are finally resilient against the changing weather.",
-    attribution: "Local Smallholder Farmer",
-    location: "Kamonyi District",
-  },
-  {
-    id: "finance",
-    tag: "Women's Economic Empowerment",
-    quote: "Before, we couldn't dream of securing a bank loan. With COCOF's Guarantee Fund at our local SACCO, we accessed low-interest capital to buy seeds, scale our production, and expand our entire cooperative.",
-    attribution: "Cooperative President",
-    location: "Kamonyi / Muhanga",
-  },
-  {
-    id: "nutrition",
-    tag: "Community Nutrition",
-    quote: "We learned to transform our own soy harvest into milk and tofu. Not only is my child's nutrition completely transformed, but we are now selling our surplus tofu to the local market for extra household income.",
-    attribution: "Rural Parent & Farmer",
-    location: "Musambira Sector, Kamonyi",
-  }
+  { id: "market" },
+  { id: "youth" },
+  { id: "agronomy" },
+  { id: "finance" },
+  { id: "nutrition" }
 ];
 
 export default function SuccessStories() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [direction, setDirection] = useState(1);
+  const t = useTranslations("SuccessStories");
 
   useEffect(() => {
     if (isHovered) return;
@@ -83,7 +55,7 @@ export default function SuccessStories() {
           <div className="inline-flex items-center gap-3 mb-3">
             <div className="w-6 h-px bg-[#E8B01C]" />
             <span className="text-[#E8B01C] text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">
-              Voices From The Field
+              {t("subtitle")}
             </span>
             <div className="w-6 h-px bg-[#E8B01C]" />
           </div>
@@ -91,7 +63,7 @@ export default function SuccessStories() {
             className="text-3xl md:text-4xl font-bold text-[#0F2B5B]"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Real impact, in their own words.
+            {t("title")}
           </h2>
         </div>
 
@@ -121,7 +93,7 @@ export default function SuccessStories() {
                 {/* Mobile top green bar */}
                 <div className="sm:hidden flex items-center justify-between bg-[#12422C] px-5 py-3">
                   <span className="text-[#E8B01C] text-[10px] font-bold uppercase tracking-[0.15em]">
-                    {current.tag}
+                    {t(`${current.id}.tag` as any)}
                   </span>
                   <span
                     className="text-[#E8B01C] text-5xl leading-none font-serif select-none"
@@ -145,7 +117,7 @@ export default function SuccessStories() {
                     className="text-[#E8B01C] text-[10px] uppercase tracking-[0.15em] font-bold rotate-180"
                     style={{ writingMode: "vertical-rl" }}
                   >
-                    {current.tag}
+                    {t(`${current.id}.tag` as any)}
                   </span>
                 </div>
 
@@ -155,7 +127,7 @@ export default function SuccessStories() {
                     className="font-serif text-lg sm:text-xl md:text-2xl text-[#0F2B5B] italic leading-relaxed mb-7"
                     style={{ fontFamily: "var(--font-fraunces)" }}
                   >
-                    &quot;{current.quote}&quot;
+                    &quot;{t(`${current.id}.quote` as any)}&quot;
                   </p>
 
                   <div className="flex items-center gap-3">
@@ -163,10 +135,10 @@ export default function SuccessStories() {
                     <div className="w-6 h-[2px] bg-[#E8B01C] shrink-0" />
                     <div>
                       <div className="text-sm font-bold text-[#0F2B5B]">
-                        {current.attribution}
+                        {t(`${current.id}.attribution` as any)}
                       </div>
                       <div className="text-xs text-gray-400 uppercase tracking-wider mt-0.5">
-                        {current.location}
+                        {t(`${current.id}.location` as any)}
                       </div>
                     </div>
                   </div>

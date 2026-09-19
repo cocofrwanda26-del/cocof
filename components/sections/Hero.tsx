@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const images = [
   "/hero.webp",
@@ -14,6 +15,7 @@ const images = [
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const t = useTranslations("Hero");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,7 +64,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <div className="mb-6 md:mb-8">
             <p className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#E8B01C] drop-shadow-md">
-              &mdash; SINCE 1994 &mdash;
+              &mdash; {t("since")} &mdash;
             </p>
           </div>
 
@@ -72,12 +74,16 @@ export default function Hero() {
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
             <span className="block sm:hidden">
-              A Rwanda where women<br />
-              and men attain <span className="text-[#E8B01C]">equal rights</span>
+              {t.rich("titleMobile", {
+                highlight: (chunks) => <span className="text-[#E8B01C]">{chunks}</span>,
+                br: () => <br />
+              })}
             </span>
             <span className="hidden sm:block">
-              A Rwanda where women and men<br />
-              attain <span className="text-[#E8B01C]">equal rights</span>
+              {t.rich("titleDesktop", {
+                highlight: (chunks) => <span className="text-[#E8B01C]">{chunks}</span>,
+                br: () => <br />
+              })}
             </span>
           </h1>
 
@@ -87,14 +93,14 @@ export default function Hero() {
               href="/get-involved"
               className="inline-flex items-center justify-center bg-[#E8B01C] text-black px-6 py-3.5 sm:px-12 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#D4A017] transition-all hover:scale-105 shadow-[0_0_30px_rgba(232,176,28,0.2)] w-1/2 sm:w-auto min-w-[160px]"
             >
-              Get Involved
+              {t("getInvolved")}
             </Link>
             
             <Link
               href="/impact"
               className="inline-flex items-center justify-center bg-transparent border-2 border-[#E8B01C] text-[#E8B01C] px-6 py-3.5 sm:px-12 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#E8B01C]/10 transition-all hover:scale-105 w-1/2 sm:w-auto min-w-[160px]"
             >
-              See Our Impact
+              {t("seeImpact")}
             </Link>
           </div>
         </motion.div>

@@ -1,0 +1,538 @@
+{
+  "Navbar": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "programs": "Programmes",
+    "impact": "Impact",
+    "partners": "Partenaires",
+    "news": "Actualités",
+    "contact": "Contact",
+    "donate": "Faire un don",
+    "getInvolved": "S'impliquer"
+  },
+  "Hero": {
+    "since": "DEPUIS 1994",
+    "titleMobile": "Un Rwanda où les femmes<br></br>et les hommes ont des <highlight>droits égaux</highlight>",
+    "titleDesktop": "Un Rwanda où les femmes et les hommes<br></br>ont des <highlight>droits égaux</highlight>",
+    "getInvolved": "S'impliquer",
+    "seeImpact": "Voir notre impact"
+  },
+  "Footer": {
+    "description": "Autonomiser les femmes rurales et les communautés vulnérables au Rwanda grâce à une agriculture durable, l'inclusion financière et l'action collective.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "rights": "© {year} COCOF Rwanda. Tous droits réservés.",
+    "legal": "ONG Légalement Enregistrée au Rwanda"
+  },
+  "HomeAbout": {
+    "tag": "À Propos",
+    "title": "Promouvoir la résilience économique durable et la transformation communautaire.",
+    "p1": "Créée en 1994 par des femmes rurales, le COCOF est une ONG accréditée dédiée à la construction d'un Rwanda où les femmes et les hommes ont des droits égaux.",
+    "p2": "Nous autonomisons plus de 20 000 bénéficiaires grâce à l'agriculture intelligente face au climat, l'horticulture à haute valeur ajoutée, et le Système d'Apprentissage et d'Action pour les Genres (GALS). En favorisant l'inclusion financière, les entreprises sociales et l'emploi des jeunes, nous stimulons la résilience économique et la transformation communautaire durables.",
+    "stats": {
+      "women": "Membres Féminines",
+      "beneficiaries": "Bénéficiaires",
+      "focus": "Domaines d'intervention",
+      "years": "Années d'action"
+    },
+    "seeImpact": "Voir notre impact"
+  },
+  "HomeFeaturedPrograms": {
+    "tag": "Ce Que Nous Faisons",
+    "title": "Nos Programmes",
+    "learnMore": "En Savoir Plus",
+    "exploreAll": "Explorer Tous Les Programmes",
+    "exploreDesc": "Découvrez notre gamme complète de 6 piliers stratégiques favorisant le changement durable au Rwanda."
+  },
+  "ProgramsData": {
+    "womens-economic": {
+      "category": "AUTONOMISATION ÉCONOMIQUE",
+      "title": "Autonomisation Économique des Femmes et Inclusion Financière",
+      "shortDesc": "Intégration des femmes rurales dans des communautés d'épargne structurées pour constituer des fonds d'urgence et développer des entreprises."
+    },
+    "sustainable-ag": {
+      "category": "AGRICULTURE DURABLE",
+      "title": "Agriculture Durable, Sécurité Alimentaire et Nutrition Communautaire",
+      "shortDesc": "Modernisation de l'agriculture grâce à la formation agronomique par les pairs et aux technologies intelligentes face au climat."
+    },
+    "cooperative-dev": {
+      "category": "AGRO-INDUSTRIE ET MARCHÉS",
+      "title": "Développement Coopératif, Agro-industrie et Accès aux Marchés",
+      "shortDesc": "Organisation des producteurs ruraux dispersés en coopératives puissantes pour l'agrégation commerciale et le profit."
+    },
+    "gender-equality": {
+      "category": "INCLUSION SOCIALE",
+      "title": "Égalité des Genres, Leadership Féminin et Inclusion Sociale",
+      "shortDesc": "Démantèlement des normes patriarcales et promotion de l'égalité des droits des femmes dans la prise de décision publique."
+    },
+    "climate-resilience": {
+      "category": "DURABILITÉ ENVIRONNEMENTALE",
+      "title": "Résilience Climatique et Durabilité Environnementale",
+      "shortDesc": "Investissement dans les infrastructures environnementales, la collecte des eaux de pluie et la création de terrasses progressives."
+    },
+    "youth-dev": {
+      "category": "DÉVELOPPEMENT DES JEUNES",
+      "title": "Développement des Jeunes, Emploi et Protection Sociale",
+      "shortDesc": "Briser le cycle de la pauvreté en dotant les jeunes vulnérables de compétences professionnelles adaptées au marché."
+    }
+  },
+  "SuccessStories": {
+    "subtitle": "Voix Du Terrain",
+    "title": "L'impact réel, avec leurs propres mots.",
+    "market": {
+      "tag": "Agro-industrie et Accès aux Marchés",
+      "quote": "Le partenariat avec les Industries de Transformation Alimentaire de Muhanga nous a garanti un marché commercial pour nos récoltes en vrac. Nous ne cultivons plus à l'aveugle ; nous gérons une véritable entreprise agricole qui rémunère équitablement nos membres.",
+      "attribution": "Membre de la Coopérative",
+      "location": "Coopérative Soutenue par le COCOF"
+    },
+    "youth": {
+      "tag": "Moyens de Subsistance des Jeunes",
+      "quote": "La formation en entrepreneuriat m'a donné les compétences pratiques pour démarrer ma propre entreprise. Aujourd'hui, je gère ma propre entreprise horticole, j'assure mes revenus et je construis mon avenir.",
+      "attribution": "Jeune Entrepreneur Agricole",
+      "location": "District de Kamonyi"
+    },
+    "agronomy": {
+      "tag": "Agriculture Durable",
+      "quote": "Apprendre directement auprès d'un Maître-Fermier certifié a changé ma façon de gérer mon sol et de lutter contre les parasites. Ma récolte a augmenté et mes cultures sont enfin résistantes aux aléas climatiques.",
+      "attribution": "Petit Exploitant Agricole Local",
+      "location": "District de Kamonyi"
+    },
+    "finance": {
+      "tag": "Autonomisation Économique des Femmes",
+      "quote": "Avant, nous ne pouvions pas rêver d'obtenir un prêt bancaire. Grâce au Fonds de Garantie du COCOF dans notre SACCO locale, nous avons accédé à des capitaux à faible taux d'intérêt pour acheter des semences, augmenter notre production et développer toute notre coopérative.",
+      "attribution": "Présidente de la Coopérative",
+      "location": "Kamonyi / Muhanga"
+    },
+    "nutrition": {
+      "tag": "Nutrition Communautaire",
+      "quote": "Nous avons appris à transformer notre propre récolte de soja en lait et en tofu. Non seulement la nutrition de mon enfant est complètement transformée, mais nous vendons maintenant notre surplus de tofu sur le marché local pour un revenu supplémentaire.",
+      "attribution": "Parent Rural et Agriculteur",
+      "location": "Secteur de Musambira, Kamonyi"
+    }
+  },
+  "PartnerMarquee": {
+    "tag": "Nos Partenaires"
+  },
+  "PartnerCTA": {
+    "title": "Vous Souhaitez Devenir Partenaire ?",
+    "desc": "Nous sommes toujours à la recherche de nouvelles collaborations pour étendre notre impact et autonomiser plus de communautés. Travaillons ensemble pour faire la différence.",
+    "donate": "Faire un don",
+    "contact": "Contactez-nous"
+  },
+  "HomeEnterprise": {
+    "tag": "Intégration d'Entreprise Sociale",
+    "title": "Industries de Transformation Alimentaire de Muhanga",
+    "desc": "La propre entreprise sociale du COCOF. Nous transformons activement le soja et le maïs locaux pour créer des liens de marché directs et rentables pour nos agriculteurs, les aidant à dépasser la vente à faible profit de matières premières.",
+    "benefits": [
+      "Agrégation Commerciale et Transformation en Vrac",
+      "Normes de Qualité et de Classement Strictes",
+      "Marchés à Haute Valeur Garantie pour les Agriculteurs"
+    ],
+    "explore": "Explorer Notre Industrie",
+    "approaches": "Nos Approches de Mise en Œuvre",
+    "local": "Approvisionnement Local",
+    "localDesc": "Garantir des marchés à haute valeur ajoutée pour les femmes rurales."
+  },
+  "ContactForm": {
+    "name": "Nom",
+    "namePlaceholder": "Votre nom complet",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-nous de votre intérêt pour le travail du COCOF...",
+    "sending": "Envoi en cours...",
+    "send": "Envoyer le message",
+    "success": "✓ Message envoyé avec succès ! Nous vous contacterons bientôt.",
+    "error": "Un problème est survenu. Veuillez nous envoyer un email directement à cocofm18@gmail.com."
+  },
+  "Contact": {
+    "tag": "Connectez-vous avec nous",
+    "title": "Commençons une conversation",
+    "desc": "Que vous soyez un partenaire potentiel, un donateur, un chercheur ou un membre de la communauté, nos portes sont toujours ouvertes. Nous serions ravis d'avoir de vos nouvelles.",
+    "sendTitle": "Envoyer un message",
+    "sendDesc": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "details": {
+      "mail": "Support par Email",
+      "phone": "Lignes Directes",
+      "map": "Siège Social",
+      "x": "Twitter / X"
+    },
+    "hq": {
+      "line1": "Secteur de Musambira, District de Kamonyi",
+      "line2": "Province du Sud, Rwanda",
+      "line3": "B.P. 01 Muhanga"
+    }
+  },
+  "GetInvolved": {
+    "tag": "Impliquez-vous",
+    "title": "Rejoignez Notre Mouvement pour un Changement Durable",
+    "desc": "Lorsque vous vous tenez à nos côtés, vous autonomisez les communautés, favorisez le développement durable et créez un avenir meilleur pour les générations à venir. Votre contribution a un impact immédiat. Soyez le catalyseur du changement que vous souhaitez voir.",
+    "donate": "Faites un don",
+    "contact": "Contactez-nous",
+    "imageAlt": "Des femmes en public ayant un impact",
+    "badgeLine1": "Ayez un",
+    "badgeLine2": "Impact Aujourd'hui"
+  },
+  "Partners": {
+    "tag": "Notre Réseau",
+    "title": "Partenaires et Affiliés",
+    "desc": "Nous collaborons avec des organisations mondiales, des agences gouvernementales et des entreprises locales pour maximiser notre impact sur l'agriculture durable et le développement communautaire au Rwanda.",
+    "viewMore": "Voir Plus",
+    "viewLess": "Voir Moins",
+    "visitWebsite": "Visiter le Site Web"
+  },
+  "PartnersData": {
+    "eu": { "role": "L'UE a financé le projet majeur « Moyens de subsistance dans la chaîne de valeur horticole » (903 004 445 FRW) par l'intermédiaire d'Oxfam au Rwanda pour augmenter la productivité horticole, introduire l'irrigation intelligente face au climat et accroître l'accès au marché pour 10 000 agriculteurs dans les districts de Kamonyi et Nyamagabe." },
+    "oxfam": { "role": "Un partenaire opérationnel massif agissant comme principal canal de financement pour la chaîne de valeur horticole (UE), la chaîne de valeur du soja (Irish Aid) et le projet de développement de la chaîne de valeur de l'ananas." },
+    "irishAid": { "role": "A financé le projet « Renforcement de l'autonomisation économique des femmes et des jeunes par le développement de la chaîne de valeur du soja » via Oxfam, qui a établi des parcelles de démonstration dans les marais et atteint 3 494 bénéficiaires." },
+    "trocaire": { "role": "A financé le projet « Eau pour la production agricole », qui a introduit des technologies de collecte des eaux de pluie et de recyclage des eaux usées auprès de 250 ménages vulnérables touchés par le changement climatique." },
+    "sciaf": { "role": "S'est associé par l'intermédiaire de Trócaire pour cofinancer le projet « Eau pour la production agricole », aidant les petits horticulteurs à s'adapter au changement climatique." },
+    "comicRelief": { "role": "A soutenu le COCOF au cours des cinq dernières années dans des interventions à court et à long terme axées sur l'autonomisation économique des femmes, les chaînes de valeur agricoles et le changement climatique." },
+    "ciat": { "role": "Répertorié comme un donateur clé au cours des cinq dernières années, soutenant les interventions du COCOF dans les chaînes de valeur agricoles, la nutrition et la sécurité alimentaire." },
+    "minecofin": { "role": "Présenté comme un partenaire national clé, le ministère des Finances et de la Planification économique collabore avec le COCOF sur des initiatives plus larges d'autonomisation économique." },
+    "rab": { "role": "A officiellement certifié le COCOF en tant que multiplicateur de semences (résultant en 208 agriculteurs locaux certifiés) et a fourni des multiplicateurs de semences essentiels pour la chaîne de valeur du soja." },
+    "profemmes": { "role": "Le COCOF est une organisation membre active de ce réseau-cadre national, qui comprend 53 organisations dirigées par des femmes défendant l'égalité des sexes au Rwanda." },
+    "radioHuguka": { "role": "Le COCOF est membre et partenaire de cette station de radio, l'utilisant comme plate-forme de diffusion pour partager les meilleures pratiques agricoles et les succès des projets avec des communautés plus larges." },
+    "mfpi": { "role": "Le COCOF a créé et soutient activement cette usine d'entreprise sociale inclusive, qui transforme le soja et le maïs pour relier les petits exploitants agricoles directement à l'ajout de valeur commerciale." },
+    "clecam": { "role": "A signé un accord avec le COCOF en tant que Fonds de Garantie, permettant aux femmes et aux coopératives d'accéder à des prêts à un taux d'intérêt très préférentiel de 12 %." },
+    "sacco": { "role": "Le COCOF a initié une microfinance locale qui a fusionné avec Umurenge SACCO Musambira pour relier les bénéficiaires aux services financiers, offrant des accords de garantie pour des prêts à 8 % d'intérêt." },
+    "duhamic": { "role": "Un partenaire stratégique dans les activités opérationnelles et les efforts de développement rural aux côtés du COCOF." },
+    "duterimbere": { "role": "Collabore étroitement au sein du réseau de partenariat plus large du COCOF, en plaidant pour un développement économique inclusif." }
+  },
+  "Programs": {
+    "title": "Six Piliers de la Transformation",
+    "desc": "Notre modèle holistique pour un changement durable dans les communautés rwandaises.",
+    "items": {
+      "womens-economic": {
+        "title": "Autonomisation Économique des Femmes",
+        "summary": "Élargir l'accès aux activités génératrices de revenus, à l'épargne et aux actifs productifs."
+      },
+      "sustainable-ag": {
+        "title": "Agriculture Durable et Sécurité Alimentaire",
+        "summary": "Améliorer les rendements agricoles grâce à des technologies intelligentes face au climat."
+      },
+      "cooperative-dev": {
+        "title": "Développement Coopératif et Accès au Marché",
+        "summary": "Renforcement de la capacité de gouvernance, de la capacité de transformation et du marketing collectif contractuel."
+      },
+      "gender-equality": {
+        "title": "Égalité des Sexes et Inclusion Sociale",
+        "summary": "Supprimer les inégalités au sein des ménages, élever le pouvoir de décision des femmes."
+      },
+      "climate-resilience": {
+        "title": "Résilience Climatique",
+        "summary": "Collecte des eaux de pluie, agroforesterie, conservation des sols."
+      },
+      "youth-dev": {
+        "title": "Développement des Jeunes et de la Communauté",
+        "summary": "Formation technique alignée sur le marché et incubateurs d'entrepreneuriat."
+      }
+    }
+  },
+  "Projects": {
+    "tag": "Subventions Institutionnelles",
+    "title": "Dossiers de Projets",
+    "desc": "Interventions à fort impact exécutées dans des délais précis, avec des budgets contractuels et des résultats convenus avec les donateurs.",
+    "keyOutcomes": "Principaux Résultats",
+    "viewDetails": "Voir les Détails Complets du Projet",
+    "funder": "Bailleur de Fonds du Projet"
+  },
+  "ProjectsData": {
+    "horticulture": {
+      "title": "Moyens de Subsistance dans la Chaîne de Valeur Horticole",
+      "category": "Horticulture d'Exportation",
+      "shortDesc": "Libérer le potentiel des chaînes de valeur horticoles du Rwanda pour assurer l'approvisionnement en produits sûrs et de haute qualité.",
+      "description": "Le projet vise à libérer le potentiel des chaînes de valeur horticoles du Rwanda pour assurer l'approvisionnement en produits sûrs et de haute qualité sur les marchés locaux/régionaux/internationaux dans les districts de Kamonyi et Muhanga en ciblant la chaîne de valeur horticole, où environ 10 000 agriculteurs bénéficieront des interventions du COCOF sur 4 ans.\n\n• Augmentation des investissements pour accroître la productivité : accès accru à des semences améliorées, adoption de technologies agricoles améliorées, augmentation de la production grâce à de meilleures technologies de récolte/post-récolte.\n\n• Augmentation des revenus pour les petits horticulteurs : adoption de technologies de conservation de l'eau, petite irrigation, augmentation des marges bénéficiaires, création d'emplois hors ferme, et plus de postes de direction pour les femmes.\n\n• Capacité accrue à répondre à l'offre et à la demande des marchés : augmentation du nombre d'acheteurs s'approvisionnant auprès de chaînes de valeur ciblées, augmentation des ventes sous contrat.\n\n• Renforcement du cadre politique horticole pour soutenir la productivité des petits exploitants.",
+      "funder": "UE via OXFAM au Rwanda",
+      "stats": {
+        "budget": "Budget",
+        "budgetVal": "214M FRW/an",
+        "target": "Cible",
+        "targetVal": "10 000 Agriculteurs",
+        "location": "Emplacement",
+        "locationVal": "Kamonyi & Nyamagabe"
+      },
+      "outcomes": [
+        "Contrats d'approvisionnement formels garantis",
+        "Introduction de serres et de systèmes de micro-irrigation",
+        "Réduction significative des pertes post-récolte"
+      ]
+    },
+    "soybean": {
+      "title": "Autonomisation Économique Accrue des Femmes et des Jeunes",
+      "category": "Développement de la Chaîne de Valeur",
+      "shortDesc": "Autonomiser les femmes et les jeunes grâce au développement de la chaîne de valeur du soja et à l'intégration des méthodologies GALS.",
+      "description": "L'objectif de ce projet est une plus grande autonomisation économique des femmes et des jeunes à travers la chaîne de valeur du soja et de l'horticulture à Kamonyi et Muhanga. Le projet a contribué à améliorer les compétences commerciales, l'accès aux intrants, aux technologies et aux marchés pour 3 494 agriculteurs pauvres et marginalisés.\n\nLe projet a également permis d'améliorer la capacité à faire face aux chocs, d'accroître le leadership des femmes et d'installer 18 parcelles de démonstration dans les marais, soutenant 3 404 agriculteurs regroupés en 18 coopératives.\n\nCes agriculteurs ont été liés au RAB (multiplicateurs de semences) et à l'industrie de transformation alimentaire de Muhanga. Des outils transformateurs de genre ont été intégrés aux activités du projet, ce qui a entraîné une augmentation de la production de soja et de légumes, en reliant les agriculteurs au marché et au financement.",
+      "funder": "Irish Aid via OXFAM",
+      "stats": {
+        "budget": "Budget",
+        "budgetVal": "88,8M FRW/an",
+        "target": "Cible",
+        "targetVal": "3 494 Agriculteurs",
+        "location": "Emplacement",
+        "locationVal": "Kamonyi & Muhanga"
+      },
+      "outcomes": [
+        "Création de 18 parcelles de démonstration",
+        "Organisation de 39 groupes d'épargne SILC",
+        "Obtention de la certification de multiplication de semences RAB"
+      ]
+    },
+    "youth": {
+      "title": "Projet d'Emploi des Jeunes — Huguka Dukore",
+      "category": "Autonomisation des Jeunes",
+      "shortDesc": "Accroître les opportunités d'emplois stables, y compris le travail indépendant, pour les jeunes hommes et femmes vulnérables.",
+      "description": "Le projet vise à accroître les opportunités d'emploi pour les jeunes vulnérables. 1 070 jeunes, dont au moins 70 % de femmes, ont été atteints dans différentes chaînes de valeur agricoles, y compris le soja, le maïs et l'horticulture.\n\nIl s'agit de jeunes non scolarisés âgés de 21 à 30 ans, ayant au moins un niveau d'éducation primaire, des décrocheurs scolaires ou des jeunes sous-employés.\n\nLe programme de formation comprenait la préparation au travail, la création d'entreprise et la formation technique, avec un accompagnement pour le placement professionnel. Actuellement, 70 % des jeunes formés ont été placés dans des emplois autour des chaînes de valeur agricoles.",
+      "funder": "USAID via EDC",
+      "stats": {
+        "budget": "Budget",
+        "budgetVal": "91,1M FRW/an",
+        "target": "Cible",
+        "targetVal": "2 500 Jeunes",
+        "location": "Emplacement",
+        "locationVal": "3 Districts"
+      },
+      "outcomes": [
+        "1 070 personnes formées (70 % de femmes)",
+        "Taux de placement professionnel de 70 %",
+        "Amélioration des connaissances financières et de l'entrepreneuriat"
+      ]
+    },
+    "water": {
+      "title": "Eau pour la Production Agricole",
+      "category": "Adaptation Climatique",
+      "shortDesc": "Renforcer la capacité des petits agriculteurs à appliquer des technologies de collecte des eaux de pluie et de recyclage des eaux usées.",
+      "description": "L'objectif global était de renforcer la capacité des petits agriculteurs à appliquer des technologies de collecte des eaux de pluie et des eaux usées pour la production horticole, augmentant ainsi la résilience au changement climatique dans le district de Kamonyi.\n\nLe projet a soutenu les petits exploitants, en particulier les femmes vulnérables au changement climatique qui souffrent d'exclusion par rapport à l'accès à l'eau, ce qui a un impact négatif sur elles.\n\nLes communautés ont été renforcées dans les technologies d'adaptation avec l'introduction de technologies de collecte des eaux pluviales et de recyclage des eaux usées, ce qui a entraîné une augmentation des revenus pour les ménages vulnérables.",
+      "funder": "SCIAF via TROCAIRE",
+      "stats": {
+        "budget": "Budget",
+        "budgetVal": "147,8M FRW",
+        "target": "Cible",
+        "targetVal": "250 Ménages",
+        "location": "Emplacement",
+        "locationVal": "District de Kamonyi"
+      },
+      "outcomes": [
+        "Construction d'infrastructures de collecte des eaux de pluie",
+        "Mise en œuvre de systèmes de recyclage des eaux usées",
+        "Permettre la culture horticole hors saison"
+      ]
+    },
+    "pineapple": {
+      "title": "Projet de Développement de la Chaîne de Valeur de l'Ananas",
+      "category": "Agriculture Biologique",
+      "shortDesc": "Renforcer la compétitivité des femmes productrices d'ananas biologiques dans les zones rurales du Rwanda.",
+      "description": "L'objectif est d'augmenter les revenus des petites exploitantes dans la chaîne de valeur de l'ananas. Le projet a contribué à l'augmentation du volume et de la qualité des ananas produits grâce à l'agriculture biologique, et à un meilleur accès aux marchés de grande valeur.\n\nLes formations ont permis d'améliorer les compétences et de changer la mentalité des agricultrices qui vendent maintenant en groupe, augmentant ainsi leur pouvoir de négociation sur le marché.\n\nLe renforcement des capacités des coopératives a accru la capacité de gestion et le leadership des femmes, les impliquant dans la prise de décision non seulement au niveau de la coopérative mais aussi au niveau du ménage.",
+      "funder": "Oxfam",
+      "stats": {
+        "budget": "Budget",
+        "budgetVal": "95,5M FRW",
+        "target": "Cible",
+        "targetVal": "210 Agriculteurs",
+        "location": "Emplacement",
+        "locationVal": "Kamonyi & Muhanga"
+      },
+      "outcomes": [
+        "Transition vers l'agriculture biologique certifiée",
+        "Ventes collectives structurées à des acheteurs de grande valeur",
+        "Avancement du contrôle foncier légal des femmes"
+      ]
+    }
+  },
+  "About": {
+    "tag": "À Propos",
+    "title": "Qui Sommes-Nous",
+    "p1": "Le COCOF — <em>Conseil Consultatif des Femmes</em> — a été fondé par des femmes rurales dans le district de Kamonyi. Sur trois décennies, nous sommes passées d'un groupe communautaire local à une ONG légalement enregistrée, promouvant les droits des femmes, leur autonomie économique et la sécurité alimentaire par l'action collective.",
+    "p2": "Poussées par notre mandat d'éradiquer les inégalités de genre et la pauvreté rurale, nous déployons des solutions durables et à fort impact dans les domaines de l'agriculture, de la finance et du développement du leadership dans plusieurs districts du Rwanda.",
+    "list1": "Inclusion Financière via Groupes d'Épargne",
+    "list2": "Agriculture Intelligente face au Climat",
+    "list3": "Emploi des Femmes et des Jeunes",
+    "readMore": "Lire l'Histoire Complète"
+  },
+  "AboutPage": {
+    "heroTitle1": "Droits Égaux.",
+    "heroTitle2": "Impact Réel.",
+    "heroDesc": "Fondée en décembre 1994 par des paysannes, nous sommes une ONG accréditée luttant pour reconstruire les communautés et assurer des moyens de subsistance durables à travers le Rwanda.",
+    "yearsOfAction": "Années d'Action",
+    "ourVision": "Notre Vision",
+    "visionText": "\"Un Rwanda où les femmes et les hommes jouissent de droits égaux.\"",
+    "ourMission": "Notre Mission",
+    "missionText": "Aider les femmes à acquérir des capacités économiques, sociales et politiques leur permettant de jouir des mêmes droits que les hommes et de résoudre les problèmes auxquels elles sont confrontées.",
+    "legalAuthority": "Autorité Légale",
+    "legalAuthDesc": "Fonctionnant avec une transparence absolue sous l'accréditation du Rwanda Governance Board (RGB) (Loi n° 058/2024). Notre légitimité est profondément enracinée dans notre histoire, officiellement reconnue depuis 2002.",
+    "stringentGov": "Gouvernance Rigoureuse",
+    "stringentGovDesc": "Un organe suprême de 40 membres, un comité d'audit indépendant et des cadres stricts de résolution des conflits garantissent une responsabilité fiduciaire maximale et une exécution stratégique à travers nos vastes réseaux (Pro-Femme Twese Hamwe).",
+    "deliveryApproaches1": "Nos Approches",
+    "deliveryApproaches2": "de Mise en Œuvre.",
+    "deliveryDesc": "Des cadres opérationnels exclusifs qui transforment la vision en une transformation communautaire tangible.",
+    "learnMore": "En savoir plus",
+    "visionaries": "Les Visionnaires",
+    "visionariesDesc": "Les esprits résilients qui font avancer notre mission.",
+    "execSecretariat": "Secrétariat Exécutif",
+    "execCommittee": "Comité Exécutif",
+    "waitingPhoto": "En attente de photo",
+    "team": {
+      "tharcisse": {
+        "title": "Secrétaire Exécutif",
+        "intro": "Dirige les opérations quotidiennes du COCOF et la mise en œuvre de la vision stratégique avec des décennies d'expérience."
+      },
+      "claudine": {
+        "title": "Secrétariat Exécutif",
+        "intro": "Mène l'exécution des programmes et les initiatives de sensibilisation communautaire dans nos secteurs clés."
+      },
+      "cyrille": {
+        "title": "Secrétariat Exécutif",
+        "intro": "Supervise l'administration financière et veille au respect de contrôles internes stricts."
+      },
+      "henriette": {
+        "title": "Secrétariat Exécutif",
+        "intro": "Coordonne les relations avec les parties prenantes et soutient la réalisation des programmes au niveau local."
+      },
+      "mathilde": {
+        "title": "Présidente et représentante légale",
+        "intro": "Fournit une supervision stratégique et défend les valeurs fondamentales du COCOF au plus haut niveau de gouvernance."
+      },
+      "clementine": {
+        "title": "Membre du Conseil",
+        "intro": "Défend les droits des femmes et façonne des stratégies à long terme pour la transformation communautaire."
+      }
+    }
+  },
+  "DonatePage": {
+    "title1": "Faites une",
+    "title2": "Différence",
+    "title3": "Aujourd'hui",
+    "desc": "Votre contribution soutient directement notre mission. 100 % de votre don va aux programmes communautaires, à l'éducation et aux initiatives de développement durable.",
+    "giveOnce": "Don unique",
+    "monthly": "Mensuel",
+    "selectAmount": "Sélectionner le montant",
+    "customAmount": "Autre montant",
+    "personalInfo": "Informations personnelles",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Adresse e-mail",
+    "paymentMethod": "Moyen de paiement",
+    "directBank": "Virement bancaire direct",
+    "bankName": "Nom de la banque",
+    "accountName": "Nom du compte",
+    "accountNumber": "Numéro de compte (IBAN)",
+    "secure": "Cryptage SSL sécurisé 256 bits",
+    "donate": "Donner",
+    "terms": "En faisant un don, vous acceptez nos conditions d'utilisation et notre politique de confidentialité.",
+    "impact1": "Votre",
+    "impact2": "Impact",
+    "meals": "Fournit des repas",
+    "mealsDesc": "Nourrit une famille de quatre personnes pendant une semaine entière, assurant une nutrition de base.",
+    "eduKit": "Kit d'éducation",
+    "eduKitDesc": "Fournit à un enfant des livres, des uniformes et des fournitures scolaires pour un trimestre.",
+    "healthcare": "Accès aux soins",
+    "healthcareDesc": "Couvre les bilans médicaux essentiels et les traitements pour les communautés isolées.",
+    "testimonial": "\"La transparence du COCOF est inégalée. Je sais exactement où va mon argent et je reçois des mises à jour régulières sur les projets que je soutiens.\"",
+    "testimonialName": "Sarah Mitchell",
+    "monthlyDonor": "Donatrice mensuelle"
+  },
+  "Approaches": {
+    "title": "Modèles et Approches Exclusifs"
+  },
+  "ProgramsPage": {
+    "tag": "Piliers Stratégiques",
+    "title": "Nos Programmes",
+    "desc": "Ces domaines permanents et globaux guident notre mission à long terme et notre planification stratégique à travers le Rwanda, favorisant un changement durable à la base.",
+    "explore": "Explorer le Programme",
+    "coopTag": "Partenariats Communautaires",
+    "coopTitle": "Coopératives avec lesquelles nous travaillons",
+    "coopDesc1": "Le COCOF soutient cinq coopératives agricoles dans le district de Kamonyi, impliquées principalement dans la production de maïs et de soja. Ces coopératives rassemblent les agriculteurs pour améliorer l'accès aux intrants agricoles, à la formation technique, aux marchés, aux finances et aux services collectifs.",
+    "coopDesc2": "Ensemble, ces plateformes organisées donnent aux agriculteurs, en particulier aux femmes, les moyens d'adopter des pratiques durables, d'augmenter la productivité et d'améliorer la sécurité alimentaire des ménages.",
+    "colNo": "N°",
+    "colCoop": "Coopérative",
+    "colFocus": "Objectif Principal",
+    "maizeAndSoybean": "Production de maïs et de soja"
+  },
+  "ProgramDetail": {
+    "back": "Retour aux Programmes",
+    "overview": "Aperçu du Programme",
+    "whySupport": "Pourquoi soutenir ce programme ?",
+    "reason1": "Autonomise directement les communautés vulnérables au Rwanda.",
+    "reason2": "Les fonds sont gérés de manière transparente avec une gouvernance stricte.",
+    "reason3": "Crée un impact durable et multi-générationnel.",
+    "fundTitle": "Financer ce Programme",
+    "fundDesc": "100 % de votre don soutient directement l'initiative.",
+    "otherAmount": "Autre montant",
+    "donate": "Faire un don de",
+    "donateNow": "Faire un don maintenant",
+    "secure": "Transaction sécurisée, cryptée SSL"
+  },
+  "ProgramsData": {
+    "womens-economic": {
+      "category": "AUTONOMISATION ÉCONOMIQUE",
+      "title": "Autonomisation Économique des Femmes et Inclusion Financière",
+      "shortDesc": "Intégrer les femmes rurales dans des communautés d'épargne structurées pour créer des fonds d'urgence et développer des entreprises.",
+      "fullDesc": "Ce programme fait systématiquement passer les femmes rurales de modèles d'épargne informels et locaux (comme l'Akagega traditionnel) à des Communautés d'Épargne et de Crédit Interne (CECI) structurées. En mettant en commun leur épargne régulière, les femmes constituent des fonds d'urgence pour leur foyer et accèdent à de petits micro-crédits internes pour investir dans des activités génératrices de revenus.\n\nAfin de supprimer complètement l'obstacle des garanties pour l'expansion des entreprises à grande échelle, le COCOF a établi des partenariats directs de Fonds de Garantie avec les institutions financières locales. Grâce à ces accords négociés, les bénéficiaires contournent le taux d'intérêt standard du marché de 24 %, obtenant des prêts commerciaux hautement préférentiels à un taux d'intérêt de 8 % via la SACCO Kaduha et la SACCO Jyambere Kamonyi, et un taux de 12 % via le CLECAM Ejoheza.\n\nLe programme associe cet accès au capital à une formation intensive en éducation financière, en budgétisation et en gestion de la dette, en accordant la priorité aux ménages dirigés par des femmes et aux personnes handicapées pour s'assurer qu'elles peuvent développer leurs entreprises en toute confiance et atteindre une indépendance économique totale."
+    },
+    "sustainable-ag": {
+      "category": "AGRICULTURE DURABLE",
+      "title": "Agriculture Durable, Sécurité Alimentaire et Nutrition Communautaire",
+      "shortDesc": "Moderniser l'agriculture grâce à la formation agronomique entre pairs et aux technologies intelligentes face au climat.",
+      "fullDesc": "Cette intervention s'appuie sur un réseau de vulgarisation décentralisé de 30 Maîtres-Fermiers certifiés, qui dispensent des formations techniques agronomiques directes entre pairs sur les collines. Ces formateurs mettent en place des parcelles de démonstration locales pour enseigner les techniques respectueuses du climat, le contrôle intégré des ravageurs et des maladies, la gestion de la fertilité des sols, et la manutention post-récolte moderne pour des cultures telles que le maïs et le soja.\n\nPour lutter contre le retard de croissance chez les jeunes enfants et la malnutrition des ménages, le programme promeut activement la culture et la consommation d'aliments biofortifiés et disponibles localement. En opérant à travers des plateformes communautaires dans des secteurs comme Musambira, Nyarubaka, Rukoma et Karama, le COCOF organise des démonstrations culinaires pratiques.\n\nIci, les familles apprennent à transformer les récoltes brutes en lait de soja riche en protéines, en tofu frais et en boulettes à base de soja. Cela garantit que l'augmentation des rendements agricoles se traduit directement par une diversité alimentaire et une sécurité nutritionnelle immédiate pour les enfants vulnérables."
+    },
+    "cooperative-dev": {
+      "category": "AGRO-INDUSTRIE ET MARCHÉS",
+      "title": "Développement des Coopératives, Agro-industrie et Accès au Marché",
+      "shortDesc": "Organiser les cultivateurs ruraux dispersés en coopératives puissantes pour le regroupement commercial et le profit.",
+      "fullDesc": "Conçu pour amener les petits exploitants au-delà de la vente peu rentable de matières premières, ce programme organise formellement les cultivateurs ruraux dispersés en coopératives puissantes et légalement enregistrées. Le COCOF investit massivement dans la gouvernance, la gestion financière transparente et les capacités de planification commerciale de ces groupes afin qu'ils puissent réaliser un regroupement commercial et regrouper leurs produits.\n\nUn moteur essentiel de ce pilier est les Industries de Transformation Alimentaire de Muhanga (MFPI), une entreprise sociale créée par le COCOF qui achète directement du maïs et du soja auprès de cinq coopératives soutenues. Le MFPI impose des normes de qualité strictes pour le calibrage, le séchage et le stockage, transformant les récoltes rurales en produits commerciaux raffinés comme la farine de soja.\n\nEn établissant ces relations d'agriculture contractuelle commerciale à long terme et ces filières de transformation, le programme garantit des marchés stables et à forte valeur ajoutée pour les femmes rurales, leur permettant de participer aux étapes les plus rentables de la chaîne de valeur agricole nationale."
+    },
+    "gender-equality": {
+      "category": "INCLUSION SOCIALE",
+      "title": "Égalité des Genres, Leadership des Femmes et Inclusion Sociale",
+      "shortDesc": "Démanteler les normes patriarcales et promouvoir l'égalité des droits des femmes dans les prises de décision publiques.",
+      "fullDesc": "Pour démanteler les normes patriarcales profondément enracinées, ce programme utilise le Système d'Apprentissage Actif sur le Genre (GALS) hautement transformateur comme méthodologie transversale obligatoire dans toutes les interventions communautaires.\n\nLe GALS utilise des outils de planification visuels basés sur des diagrammes qui permettent aux conjoints, alphabétisés ou non, de s'asseoir ensemble et de définir une vision financière commune pour leur ménage. Il engage activement les hommes à modifier leurs attitudes historiques à l'égard du travail domestique et du contrôle financier, permettant aux femmes de participer à parts égales aux décisions concernant les dépenses et les réinvestissements des revenus agricoles.\n\nAu-delà du niveau du ménage, le programme renforce les compétences des agricultrices en matière de prise de parole en public, de confiance en soi et de plaidoyer, en poussant systématiquement les femmes à occuper des postes de direction et de décision clés au sein de leurs coopératives agricoles et des structures civiques locales."
+    },
+    "climate-resilience": {
+      "category": "DURABILITÉ ENVIRONNEMENTALE",
+      "title": "Résilience Climatique et Durabilité Environnementale",
+      "shortDesc": "Investir dans des infrastructures environnementales, la collecte d'eau de pluie et les terrasses progressives.",
+      "fullDesc": "Reconnaissant que le changement climatique affecte de manière disproportionnée les femmes qui dépendent de l'agriculture pluviale, ce programme investit massivement dans des infrastructures environnementales physiques et la gestion durable des terres. Le COCOF construit des systèmes de collecte d'eau de pluie sur les toits à faible coût et des unités de recyclage des eaux usées, qui fournissent un approvisionnement en eau fiable pour la culture horticole hors saison.\n\nCette infrastructure vitale réduit considérablement les longues et dangereuses distances que les femmes doivent parcourir pour aller chercher de l'eau, libérant ainsi énormément de temps pour des activités génératrices de revenus. Le programme stabilise davantage les collines vulnérables contre l'érosion en finançant des terrasses progressives, en plantant des bandes d'agroforesterie le long des courbes de niveau et en appliquant des protocoles de conservation des sols.\n\nDe plus, le COCOF aide les coopératives à éliminer progressivement l'utilisation de produits agrochimiques de synthèse, en faisant activement la transition de cultures à haute valeur (comme l'ananas) vers des normes d'agriculture biologique certifiées qui protègent la biodiversité locale et garantissent des prix de marché supérieurs."
+    },
+    "youth-dev": {
+      "category": "DÉVELOPPEMENT DES JEUNES",
+      "title": "Développement des Jeunes, Emploi et Protection Sociale",
+      "shortDesc": "Briser le cycle de la pauvreté en offrant aux jeunes vulnérables des compétences professionnelles axées sur le marché.",
+      "fullDesc": "Axé sur la rupture du cycle de la pauvreté intergénérationnelle, ce programme cible les jeunes non scolarisés, très vulnérables et sans emploi (y compris les diplômés de l'EFTP et ceux ayant abandonné l'école secondaire) qui survivent avec moins de 1,75 $ par jour.\n\nLe programme propose des modules professionnels intensifs et adaptés au marché, notamment \"Préparation au Travail\" et \"Soyez Votre Propre Patron\", conçus pour forger un état d'esprit entrepreneurial d'élite et des compétences pratiques en gestion d'entreprise. Après avoir terminé la formation, les jeunes bénéficient d'un accompagnement direct pour le placement professionnel, les intégrant de manière fluide dans les chaînes de valeur agricoles rentables, telles que l'horticulture commerciale, et la production de maïs et de soja.\n\nEn fournissant des kits de démarrage, en comblant l'écart avec la microfinance et en reliant les jeunes diplômés à des emplois agroalimentaires formels, le programme met en place un solide filet de protection sociale qui transforme les membres marginalisés de la communauté en moteurs économiques actifs."
+    }
+  },
+  "ApproachesData": {
+    "silc": {
+      "title": "SILC (Communautés d'Épargne et de Crédit Interne)",
+      "description": "Le COCOF a fait passer les communautés du modèle traditionnel Akagega aux groupes SILC structurés, formalisant l'épargne et fournissant un tremplin vers l'indépendance financière."
+    },
+    "sacco": {
+      "title": "Fonds de Garantie — SACCO",
+      "description": "Les membres accèdent à des prêts à un taux d'intérêt préférentiel de 8 % par l'intermédiaire des SACCO (Kaduha, Jyambere Kamonyi) — une baisse significative par rapport au taux standard de 24 %."
+    },
+    "clecam": {
+      "title": "Fonds de Garantie — CLECAM",
+      "description": "Les membres obtiennent un taux d'intérêt compétitif de 12 % par l'intermédiaire des succursales du CLECAM à Ejoheza Muhanga et Kamonyi, ce qui leur permet d'investir dans leurs entreprises."
+    },
+    "gals": {
+      "title": "Système d'Apprentissage et d'Action pour les Genres (GALS)",
+      "description": "Une approche transversale transformant les dynamiques au sein des ménages afin que les femmes participent à part égale à la gestion des ressources et aux décisions familiales stratégiques."
+    },
+    "mfpi": {
+      "title": "Industries de Transformation Alimentaire de Muhanga",
+      "description": "La propre entreprise sociale du COCOF, qui transforme le soja et le maïs locaux pour créer des liens commerciaux directs et rentables pour nos agriculteurs."
+    }
+  },
+  "ImpactStats": {
+    "tag": "Notre Impact",
+    "title": "Changement Mesurable",
+    "desc": "Un aperçu de nos résultats obtenus après des décennies d'autonomisation des communautés et de transformation durable.",
+    "stats": {
+      "women": "Membres Féminines",
+      "beneficiaries": "Bénéficiaires",
+      "focus": "Domaines d'Intervention",
+      "years": "Années d'Action"
+    }
+  }
+}

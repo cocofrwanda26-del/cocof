@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function XIcon({ size = 15 }: { size?: number }) {
   return (
@@ -11,13 +12,16 @@ function XIcon({ size = 15 }: { size?: number }) {
 }
 
 const quickLinks = [
-  { label: "About", href: "/about" },
-  { label: "Programs", href: "/programs" },
-  { label: "Partners", href: "/partners" },
-  { label: "Contact", href: "/contact" },
+  { key: "about", href: "/about" },
+  { key: "programs", href: "/programs" },
+  { key: "partners", href: "/partners" },
+  { key: "contact", href: "/contact" },
 ];
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  const navT = useTranslations("Navbar");
+
   return (
     <footer className="bg-[#0A2613] text-white/80">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -40,7 +44,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-base leading-relaxed text-white/70 max-w-xs">
-              Conseil Consultatif des Femmes — Rwanda's women-led advisory council driving agricultural transformation and gender equity since 1994.
+              {t("description")}
             </p>
             <a
               href="https://x.com/cocof_m"
@@ -55,7 +59,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <p className="text-sm uppercase tracking-widest text-[#E8B01C] font-semibold mb-5">Navigation</p>
+            <p className="text-sm uppercase tracking-widest text-[#E8B01C] font-semibold mb-5">{t("navigation")}</p>
             <nav className="flex flex-col gap-3">
               {quickLinks.map((l) => (
                 <Link
@@ -63,7 +67,7 @@ export default function Footer() {
                   href={l.href}
                   className="text-base text-white/70 hover:text-[#E8B01C] transition-colors"
                 >
-                  {l.label}
+                  {navT(l.key as any)}
                 </Link>
               ))}
             </nav>
@@ -71,7 +75,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-sm uppercase tracking-widest text-[#E8B01C] font-semibold mb-5">Contact</p>
+            <p className="text-sm uppercase tracking-widest text-[#E8B01C] font-semibold mb-5">{t("contact")}</p>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3 text-base text-white/70">
                 <Mail size={18} className="mt-0.5 shrink-0 text-[#E8B01C]" />
@@ -79,7 +83,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-base text-white/70">
                 <Phone size={18} className="mt-0.5 shrink-0 text-[#E8B01C]" />
-                <span>+250 788 492 119</span>
+                <span>+250 788 480 161 / +250 722 855 445</span>
               </li>
               <li className="flex items-start gap-3 text-base text-white/70">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-[#E8B01C]" />
@@ -90,8 +94,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} COCOF Rwanda. All rights reserved.</p>
-          <p>Legally registered under Ministerial Order no. 073/11</p>
+          <p>{t("rights", { year: new Date().getFullYear() })}</p>
+          <p>{t("legal")}</p>
         </div>
       </div>
     </footer>

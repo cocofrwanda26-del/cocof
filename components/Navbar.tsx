@@ -1,24 +1,28 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
-const links = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Programs", href: "/programs" },
-  { label: "Impact", href: "/impact" },
-  { label: "Partners", href: "/partners" },
-  { label: "News", href: "/news" },
-  { label: "Contact", href: "/contact" },
+const linkKeys = [
+  { key: "home", href: "/" },
+  { key: "about", href: "/about" },
+  { key: "programs", href: "/programs" },
+  { key: "impact", href: "/impact" },
+  { key: "partners", href: "/partners" },
+  { key: "news", href: "/news" },
+  { key: "contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -52,30 +56,39 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
+          {linkKeys.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               className="text-base font-bold transition-colors duration-200 text-muted hover:text-[#1B4B8F]"
             >
-              {l.label}
+              {t(l.key as any)}
             </Link>
           ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
           <Link
+            href={pathname}
+            locale={locale === 'en' ? 'fr' : 'en'}
+            className="inline-flex items-center gap-2 px-3 py-2 rounded text-base font-bold text-ink transition-colors duration-200 hover:text-[#1B4B8F]"
+            title={locale === 'en' ? 'Français' : 'English'}
+          >
+            <Globe size={18} />
+            <span className="uppercase">{locale === 'en' ? 'FR' : 'EN'}</span>
+          </Link>
+          <Link
             href="/donate"
             className="inline-flex items-center px-6 py-3 rounded text-base font-bold text-[#1B4B8F] bg-[#F3F7FC] transition-all duration-200 hover:bg-[#E2E8F0]"
           >
-            Donate
+            {t("donate")}
           </Link>
           <Link
             href="/get-involved"
             className="inline-flex items-center px-6 py-3 rounded text-base font-bold text-white transition-all duration-200 hover:bg-[#153a70]"
             style={{ background: "#1B4B8F" }}
           >
-            Get Involved
+            {t("getInvolved")}
           </Link>
         </div>
 
@@ -98,23 +111,32 @@ export default function Navbar() {
             className="md:hidden bg-white border-t border-black/5 px-6 pb-6 pt-4"
           >
             <nav className="flex flex-col gap-4">
-              {links.map((l) => (
+              {linkKeys.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
                   className="text-base font-medium text-ink/80 hover:text-[#1B4B8F] transition-colors"
                 >
-                  {l.label}
+                  {t(l.key as any)}
                 </Link>
               ))}
               <div className="mt-2 flex flex-col gap-3">
+                <Link
+                  href={pathname}
+                  locale={locale === 'en' ? 'fr' : 'en'}
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex justify-center items-center gap-2 px-5 py-2.5 rounded text-sm font-bold text-ink border border-black/10 transition-colors"
+                >
+                  <Globe size={16} />
+                  <span>{locale === 'en' ? 'Français' : 'English'}</span>
+                </Link>
                 <Link
                   href="/donate"
                   onClick={() => setMenuOpen(false)}
                   className="inline-flex justify-center items-center px-5 py-2.5 rounded text-sm font-bold text-[#1B4B8F] bg-[#F3F7FC]"
                 >
-                  Donate
+                  {t("donate")}
                 </Link>
                 <Link
                   href="/get-involved"
@@ -122,7 +144,7 @@ export default function Navbar() {
                   className="inline-flex justify-center items-center px-5 py-2.5 rounded text-sm font-semibold text-white"
                   style={{ background: "#1B4B8F" }}
                 >
-                  Get Involved
+                  {t("getInvolved")}
                 </Link>
               </div>
             </nav>
