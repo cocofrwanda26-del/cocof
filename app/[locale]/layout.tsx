@@ -19,10 +19,33 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "COCOF Rwanda — Women's Advisory Council",
+  metadataBase: new URL("https://cocof.org.rw"),
+  title: {
+    default: "COCOF Rwanda — Women's Advisory Council",
+    template: "%s | COCOF Rwanda",
+  },
   description:
     "COCOF (Conseil Consultatif des Femmes) is a Rwandan NGO founded in 1994, empowering women through horticulture, gender-transformative programs, financial inclusion, and climate-smart agriculture.",
-  keywords: ["COCOF", "Rwanda", "NGO", "women empowerment", "agriculture", "Kamonyi"],
+  keywords: [
+    "COCOF",
+    "Rwanda",
+    "NGO",
+    "women empowerment",
+    "agriculture",
+    "Kamonyi",
+    "Conseil Consultatif des Femmes",
+    "gender equality",
+    "climate-smart agriculture",
+    "financial inclusion",
+  ],
+  authors: [{ name: "COCOF Rwanda" }],
+  creator: "COCOF Rwanda",
+  publisher: "COCOF Rwanda",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: "/icon/favicon.ico" },
@@ -38,8 +61,26 @@ export const metadata: Metadata = {
     title: "COCOF Rwanda — Women's Advisory Council",
     description:
       "Empowering Rwandan Women Through Agriculture, Equity, and Opportunity.",
-    type: "website",
+    url: "https://cocof.org.rw",
+    siteName: "COCOF Rwanda",
     locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "COCOF Rwanda — Women's Advisory Council",
+    description: "Empowering Rwandan Women Through Agriculture, Equity, and Opportunity.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

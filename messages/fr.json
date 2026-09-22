@@ -522,6 +522,18 @@
     "mfpi": {
       "title": "Industries de Transformation Alimentaire de Muhanga",
       "description": "La propre entreprise sociale du COCOF, qui transforme le soja et le maïs locaux pour créer des liens commerciaux directs et rentables pour nos agriculteurs."
+    },
+    "finance": {
+      "title": "Cadre de Fonds de Garantie",
+      "description": "Partenariats de partage des risques avec les institutions de microfinance pour contourner les garanties et accéder à des crédits d'investissement abordables et hautement négociés."
+    },
+    "agriculture": {
+      "title": "Vulgarisation par des Paysans Formateurs",
+      "description": "30 formateurs communautaires certifiés démontrant une agriculture intelligente face au climat directement par le biais de réseaux d'apprentissage entre pairs."
+    },
+    "aggregation": {
+      "title": "Pôles Commerciaux",
+      "description": "Organisation des petits exploitants en centres permettant d'atteindre des volumes importants, d'établir la traçabilité et de garantir des accords d'approvisionnement."
     }
   },
   "ImpactStats": {

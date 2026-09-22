@@ -522,6 +522,18 @@
     "mfpi": {
       "title": "Muhanga Food Processing Industries",
       "description": "COCOF's own social enterprise, processing local soya and maize to create direct, profitable market linkages for our farmers."
+    },
+    "finance": {
+      "title": "Guarantee Fund Framework",
+      "description": "Risk-sharing partnerships with microfinance institutions to bypass collateral and access highly negotiated, affordable investment credit."
+    },
+    "agriculture": {
+      "title": "Farmer Trainer Extension",
+      "description": "30 certified community trainers demonstrating climate-smart agriculture directly through peer-to-peer learning networks."
+    },
+    "aggregation": {
+      "title": "Commercial Hubs",
+      "description": "Organizing smallholders into centers that achieve bulk volumes, establish traceability, and secure supply agreements."
     }
   },
   "ImpactStats": {

@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Shield, Users, Target, Landmark, Leaf, Briefcase, Network, Sparkles, Eye, Scale, ArrowRight } from "lucide-react";
 import { useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { APPROACHES } from "@/data/approaches";
 import { useTranslations } from "next-intl";
