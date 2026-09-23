@@ -21,29 +21,31 @@ export default function DonatePage() {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Hero Section with Photo "2" */}
-        <div className="relative rounded-3xl overflow-hidden mb-16 shadow-2xl h-[400px] md:h-[500px]">
+        <div className="relative rounded-3xl overflow-hidden mb-16 shadow-2xl flex flex-col min-h-[450px] md:min-h-[500px]">
           <Image 
             src="/2.webp" 
             alt="Empower Women"
             fill
-            className="object-cover"
+            className="object-cover z-0"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B3019] via-[#0B3019]/60 to-transparent flex items-end">
-            <div className="p-8 md:p-12 w-full max-w-4xl">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-tight" style={{ fontFamily: 'var(--font-fraunces)' }}>
-                  {t("title1")} <span className="text-[#FFCC00] drop-shadow-sm">{t("title2")}</span> <br className="hidden md:block" />{t("title3")}
-                </h1>
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
-                  {t("desc")}
-                </p>
-              </motion.div>
-            </div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B3019] via-[#0B3019]/70 to-transparent z-10"></div>
+          
+          {/* Content Container */}
+          <div className="relative z-20 p-6 pt-24 md:p-12 w-full max-w-4xl mt-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-[2rem] leading-[1.1] md:text-6xl font-bold text-white mb-4 tracking-tight" style={{ fontFamily: 'var(--font-fraunces)' }}>
+                {t("title1")} <span className="text-[#FFCC00] drop-shadow-sm">{t("title2")}</span> <br className="hidden md:block" />{t("title3")}
+              </h1>
+              <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-2xl">
+                {t("desc")}
+              </p>
+            </motion.div>
           </div>
         </div>
 

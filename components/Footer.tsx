@@ -79,7 +79,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3 text-base text-white/70">
                 <Mail size={18} className="mt-0.5 shrink-0 text-[#E8B01C]" />
-                <span>info@cocof.org.rw / cocofm18@gmail.com</span>
+                <span>info@cocof.org.rw</span>
               </li>
               <li className="flex items-start gap-3 text-base text-white/70">
                 <Phone size={18} className="mt-0.5 shrink-0 text-[#E8B01C]" />
