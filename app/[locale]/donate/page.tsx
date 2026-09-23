@@ -224,8 +224,8 @@ export default function DonatePage() {
                     $25
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1 text-white">{t("meals")}</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">{t("mealsDesc")}</p>
+                    <h4 className="font-bold text-lg mb-1 text-white">{t("impactAgri")}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{t("impactAgriDesc")}</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -233,8 +233,8 @@ export default function DonatePage() {
                     $50
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1 text-white">{t("eduKit")}</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">{t("eduKitDesc")}</p>
+                    <h4 className="font-bold text-lg mb-1 text-white">{t("impactBiz")}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{t("impactBizDesc")}</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -242,8 +242,8 @@ export default function DonatePage() {
                     $100
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1 text-white">{t("healthcare")}</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">{t("healthcareDesc")}</p>
+                    <h4 className="font-bold text-lg mb-1 text-white">{t("impactYouth")}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{t("impactYouthDesc")}</p>
                   </div>
                 </li>
               </ul>
