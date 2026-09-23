@@ -1,240 +1,250 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Heart, ShieldCheck, CreditCard, ArrowRight, Lock, Landmark } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Heart, Building2, MapPin, Landmark, Copy, Check, MessageCircle, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
-
-const AMOUNTS = [25, 50, 100, 250];
+import Image from "next/image";
 
 export default function DonatePage() {
   const t = useTranslations("DonatePage");
-  const [selectedAmount, setSelectedAmount] = useState<number | 'custom'>(50);
-  const [customAmount, setCustomAmount] = useState<string>("");
-  const [isMonthly, setIsMonthly] = useState(false);
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+  
+  const handleCopy = (text: string, field: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedField(field);
+    setTimeout(() => setCopiedField(null), 2000);
+  };
 
   return (
     <main className="min-h-screen bg-[#F3F7FC] pt-32 pb-24 selection:bg-[#FFCC00] selection:text-[#0B3019]">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Header Section */}
-        <div className="max-w-3xl mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#0B3019] mb-6 tracking-tight leading-tight" style={{ fontFamily: 'var(--font-fraunces)' }}>
-              {t("title1")} <span className="text-[#FFCC00] drop-shadow-sm">{t("title2")}</span> {t("title3")}
-            </h1>
-            <p className="text-lg md:text-xl text-[#5A5A5A] leading-relaxed">
-              {t("desc")}
-            </p>
-          </motion.div>
+        {/* Hero Section with Photo "2" */}
+        <div className="relative rounded-3xl overflow-hidden mb-16 shadow-2xl h-[400px] md:h-[500px]">
+          <Image 
+            src="/2.webp" 
+            alt="Empower Women"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B3019] via-[#0B3019]/60 to-transparent flex items-end">
+            <div className="p-8 md:p-12 w-full max-w-4xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-tight" style={{ fontFamily: 'var(--font-fraunces)' }}>
+                  {t("title1")} <span className="text-[#FFCC00] drop-shadow-sm">{t("title2")}</span> <br className="hidden md:block" />{t("title3")}
+                </h1>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+                  {t("desc")}
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           
-          {/* Main Form Column */}
+          {/* Main Bank Details Column */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-7 bg-white rounded-3xl p-8 md:p-12 shadow-[0_4px_24px_rgba(26,26,26,0.04)] border border-black/5"
+            className="lg:col-span-8 bg-white rounded-3xl p-6 md:p-12 shadow-[0_4px_24px_rgba(26,26,26,0.04)] border border-black/5 relative overflow-hidden"
           >
-            {/* Frequency Toggle */}
-            <div className="flex bg-[#F3F7FC] p-1.5 rounded-xl mb-10 w-fit">
-              <button
-                onClick={() => setIsMonthly(false)}
-                className={`px-8 py-3 rounded-lg text-sm font-bold transition-all duration-300 ${!isMonthly ? 'bg-white text-[#0B3019] shadow-sm' : 'text-[#5A5A5A] hover:text-[#0B3019]'}`}
-              >
-                {t("giveOnce")}
-              </button>
-              <button
-                onClick={() => setIsMonthly(true)}
-                className={`px-8 py-3 rounded-lg text-sm font-bold transition-all duration-300 flex items-center gap-2 ${isMonthly ? 'bg-white text-[#0B3019] shadow-sm' : 'text-[#5A5A5A] hover:text-[#0B3019]'}`}
-              >
-                <Heart size={16} className={isMonthly ? 'text-[#FFCC00]' : 'text-transparent'} fill={isMonthly ? '#FFCC00' : 'none'} strokeWidth={isMonthly ? 0 : 2} />
-                {t("monthly")}
-              </button>
+            <div className="absolute top-0 left-0 w-2 h-full bg-[#FFCC00]"></div>
+            
+            <div className="flex items-center gap-3 mb-8">
+              <Landmark className="text-[#FFCC00]" size={32} />
+              <h2 className="text-2xl font-bold text-[#0B3019]">{t("bankDetailsTitle")}</h2>
             </div>
 
-            {/* Amount Selection */}
-            <div className="mb-12">
-              <h3 className="text-lg font-bold text-[#0B3019] mb-5">{t("selectAmount")}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {AMOUNTS.map((amount) => (
-                  <button
-                    key={amount}
-                    onClick={() => { setSelectedAmount(amount); setCustomAmount(""); }}
-                    className={`py-4 rounded-xl text-xl font-bold border-2 transition-all duration-200 ${
-                      selectedAmount === amount
-                        ? 'border-[#FFCC00] bg-[#FFCC00]/10 text-[#0B3019]'
-                        : 'border-[#F3F7FC] bg-[#F3F7FC]/40 text-[#1A1A1A] hover:border-[#FFCC00]/50 hover:bg-[#FFCC00]/5'
-                    }`}
+            <div className="space-y-6">
+              {/* Prominent High Priority Details */}
+              <div className="bg-[#FFFDF5] border border-[#FFCC00]/30 rounded-2xl p-5 md:p-8 space-y-6 shadow-sm">
+                
+                {/* Beneficiary Name */}
+                <div className="flex flex-row justify-between items-center gap-4 border-b border-[#0B3019]/10 pb-6">
+                  <div className="flex-1 overflow-hidden">
+                    <p className="text-xs md:text-sm font-bold text-[#5A5A5A] uppercase tracking-wider mb-1">{t("beneficiary")}</p>
+                    <p className="text-lg md:text-2xl font-extrabold text-[#0B3019] break-words">{t("beneficiaryValue")}</p>
+                  </div>
+                  <button 
+                    onClick={() => handleCopy("COCOF (Conseil Consultatif des Femmes)", "beneficiary")}
+                    className="ml-4 p-3 md:p-2 rounded-xl md:rounded-lg bg-[#F3F7FC] hover:bg-[#FFCC00]/20 text-[#0B3019] transition-colors flex-shrink-0 flex items-center justify-center"
+                    title={t("copy")}
                   >
-                    ${amount}
+                    {copiedField === "beneficiary" ? <Check size={20} className="text-green-600" /> : <Copy size={20} />}
                   </button>
-                ))}
-              </div>
-              <div className="mt-4">
-                <div className={`relative flex items-center border-2 rounded-xl overflow-hidden transition-colors duration-200 ${selectedAmount === 'custom' ? 'border-[#FFCC00] bg-[#FFCC00]/5' : 'border-[#F3F7FC] hover:border-[#FFCC00]/50'}`}>
-                  <span className="absolute left-6 text-xl font-bold text-[#1A1A1A]">$</span>
-                  <input
-                    type="number"
-                    placeholder={t("customAmount")}
-                    value={customAmount}
-                    onFocus={() => setSelectedAmount('custom')}
-                    onChange={(e) => {
-                      setSelectedAmount('custom');
-                      setCustomAmount(e.target.value);
-                    }}
-                    className="w-full py-4 pl-12 pr-6 text-xl font-bold text-[#0B3019] bg-transparent outline-none placeholder:text-[#5A5A5A]/40"
-                  />
+                </div>
+
+                {/* Account Number */}
+                <div className="flex flex-row justify-between items-center gap-4 border-b border-[#0B3019]/10 pb-6">
+                  <div className="flex-1 overflow-hidden">
+                    <p className="text-xs md:text-sm font-bold text-[#5A5A5A] uppercase tracking-wider mb-1">{t("accountNumber")}</p>
+                    <p className="text-xl md:text-3xl font-mono font-bold text-[#0B3019] md:tracking-widest break-all">{t("accountNumberValue")}</p>
+                  </div>
+                  <button 
+                    onClick={() => handleCopy("2170004972", "accountNumber")}
+                    className="ml-4 p-3 md:p-2 rounded-xl md:rounded-lg bg-[#F3F7FC] hover:bg-[#FFCC00]/20 text-[#0B3019] transition-colors flex-shrink-0 flex items-center justify-center"
+                    title={t("copy")}
+                  >
+                    {copiedField === "accountNumber" ? <Check size={20} className="text-green-600" /> : <Copy size={20} />}
+                  </button>
+                </div>
+
+                {/* SWIFT / BIC */}
+                <div className="flex flex-row justify-between items-center gap-4 border-b border-[#0B3019]/10 pb-6">
+                  <div className="flex-1 overflow-hidden">
+                    <p className="text-xs md:text-sm font-bold text-[#5A5A5A] uppercase tracking-wider mb-1">{t("swift")}</p>
+                    <p className="text-lg md:text-2xl font-mono font-bold text-[#0B3019]">{t("swiftValue")}</p>
+                  </div>
+                  <button 
+                    onClick={() => handleCopy("GTBIRWRK", "swift")}
+                    className="ml-4 p-3 md:p-2 rounded-xl md:rounded-lg bg-[#F3F7FC] hover:bg-[#FFCC00]/20 text-[#0B3019] transition-colors flex-shrink-0 flex items-center justify-center"
+                    title={t("copy")}
+                  >
+                    {copiedField === "swift" ? <Check size={20} className="text-green-600" /> : <Copy size={20} />}
+                  </button>
+                </div>
+
+                {/* Bank Name */}
+                <div className="flex flex-row justify-between items-center gap-4">
+                  <div className="flex-1 overflow-hidden">
+                    <p className="text-xs md:text-sm font-bold text-[#5A5A5A] uppercase tracking-wider mb-1">{t("bank")}</p>
+                    <p className="text-lg md:text-2xl font-bold text-[#0B3019] break-words">{t("bankValue")}</p>
+                  </div>
+                  <button 
+                    onClick={() => handleCopy("Guaranty Trust Bank (Rwanda) Plc", "bankName")}
+                    className="ml-4 p-3 md:p-2 rounded-xl md:rounded-lg bg-[#F3F7FC] hover:bg-[#FFCC00]/20 text-[#0B3019] transition-colors flex-shrink-0 flex items-center justify-center"
+                    title={t("copy")}
+                  >
+                    {copiedField === "bankName" ? <Check size={20} className="text-green-600" /> : <Copy size={20} />}
+                  </button>
                 </div>
               </div>
-            </div>
 
-            {/* Personal Information */}
-            <div className="mb-12">
-              <h3 className="text-lg font-bold text-[#0B3019] mb-5">{t("personalInfo")}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Secondary Details (For Compliance / Wire Transfer Forms) */}
+              <div className="bg-[#F3F7FC] rounded-2xl p-5 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-[#5A5A5A] mb-2 ml-1">{t("firstName")}</label>
-                  <input type="text" className="w-full px-5 py-4 bg-[#F3F7FC] border border-transparent rounded-xl focus:bg-[#FFFDF5] focus:border-[#FFCC00] outline-none transition-all duration-200 text-[#0B3019]" placeholder="John" />
+                  <div className="flex items-center gap-2 text-[#5A5A5A] mb-1">
+                    <Building2 size={16} />
+                    <p className="text-xs font-bold uppercase">{t("bankAddress")}</p>
+                  </div>
+                  <p className="text-sm font-medium text-[#0B3019]">{t("bankAddressValue")}</p>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-[#5A5A5A] mb-2 ml-1">{t("lastName")}</label>
-                  <input type="text" className="w-full px-5 py-4 bg-[#F3F7FC] border border-transparent rounded-xl focus:bg-[#FFFDF5] focus:border-[#FFCC00] outline-none transition-all duration-200 text-[#0B3019]" placeholder="Doe" />
+                  <div className="flex items-center gap-2 text-[#5A5A5A] mb-1">
+                    <MapPin size={16} />
+                    <p className="text-xs font-bold uppercase">{t("beneficiaryLocation")}</p>
+                  </div>
+                  <p className="text-sm font-medium text-[#0B3019]">{t("beneficiaryLocationValue")}</p>
                 </div>
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-semibold text-[#5A5A5A] mb-2 ml-1">{t("email")}</label>
-                  <input type="email" className="w-full px-5 py-4 bg-[#F3F7FC] border border-transparent rounded-xl focus:bg-[#FFFDF5] focus:border-[#FFCC00] outline-none transition-all duration-200 text-[#0B3019]" placeholder="john@example.com" />
+                <div className="md:col-span-2 pt-2 border-t border-[#0B3019]/10">
+                  <p className="text-xs font-bold uppercase text-[#5A5A5A] mb-1">{t("currency")}</p>
+                  <p className="text-sm font-medium text-[#0B3019]">{t("currencyValue")}</p>
                 </div>
               </div>
             </div>
-
-            {/* Payment Method Skeleton & Bank Details */}
-            <div className="mb-10">
-              <h3 className="text-lg font-bold text-[#0B3019] mb-5">{t("paymentMethod")}</h3>
-              
-              {/* Card Skeleton */}
-              <div className="w-full border-2 border-[#E2E8F0] rounded-xl p-6 flex items-center gap-5 bg-white mb-5 hover:border-[#FFCC00]/40 transition-colors cursor-pointer">
-                <CreditCard className="text-[#5A5A5A]" size={28} />
-                <div className="flex-1">
-                  <div className="h-2.5 w-32 bg-[#E2E8F0] rounded-full mb-3"></div>
-                  <div className="h-2 w-48 bg-[#F3F7FC] rounded-full"></div>
-                </div>
-                <Lock className="text-[#0B3019]/20" size={24} />
-              </div>
-
-              {/* Bank Account Details */}
-              <div className="bg-[#FFFDF5] border-2 border-[#FFCC00]/40 rounded-xl p-6 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FFCC00]"></div>
-                <h4 className="font-bold text-[#0B3019] mb-4 text-sm flex items-center gap-2">
-                  <Landmark size={18} className="text-[#FFCC00]" />
-                  {t("directBank")}
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-[#5A5A5A] text-xs font-semibold mb-0.5">{t("bankName")}</p>
-                    <p className="font-bold text-[#0B3019]">Global Heritage Bank</p>
-                  </div>
-                  <div>
-                    <p className="text-[#5A5A5A] text-xs font-semibold mb-0.5">{t("accountName")}</p>
-                    <p className="font-bold text-[#0B3019]">COCOF NGO</p>
-                  </div>
-                  <div className="md:col-span-2 mt-1">
-                    <p className="text-[#5A5A5A] text-xs font-semibold mb-1.5">{t("accountNumber")}</p>
-                    <p className="font-mono font-bold text-[#0B3019] bg-white px-4 py-2.5 rounded-lg border border-[#FFCC00]/30 inline-block w-full md:w-auto shadow-sm text-base">
-                      CH93 0000 0000 0000 0000 0
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-sm text-[#5A5A5A] mt-5 flex items-center gap-2 ml-1 font-medium">
-                <ShieldCheck size={18} className="text-[#0B3019]" />
-                {t("secure")}
-              </p>
-            </div>
-
-            <button className="w-full py-5 rounded-xl text-[#0B3019] font-bold text-lg flex items-center justify-center gap-3 group transition-all duration-300 hover:bg-[#e6b800] shadow-[0_4px_14px_rgba(255,204,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,204,0,0.4)]" style={{ background: '#FFCC00' }}>
-              {t("donate")} {selectedAmount === 'custom' ? (customAmount ? `$${customAmount}` : '') : `$${selectedAmount}`}
-              <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-center text-sm text-[#5A5A5A] mt-5">
-              {t("terms")}
-            </p>
-
           </motion.div>
 
-          {/* Info Column */}
+          {/* Info & Assistance Column */}
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="lg:col-span-5 flex flex-col gap-8"
+            className="lg:col-span-4 flex flex-col gap-8"
           >
+            {/* Assistance Box */}
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-[0_4px_24px_rgba(26,26,26,0.04)] border border-black/5">
+              <h3 className="text-xl font-bold text-[#0B3019] mb-2">{t("assistanceTitle")}</h3>
+              <p className="text-[#5A5A5A] text-sm mb-6">{t("assistanceDesc")}</p>
+              
+              <div className="space-y-4">
+                <a 
+                  href="https://wa.me/250788000180" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 transition-colors group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <MessageCircle size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#5A5A5A] uppercase">{t("whatsapp")}</p>
+                    <p className="font-bold text-[#0B3019]">{t("whatsappNum")}</p>
+                  </div>
+                </a>
+
+                <div className="p-4 rounded-xl bg-[#F3F7FC] border border-transparent focus-within:border-[#FFCC00]/50 transition-colors">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Mail size={18} className="text-[#5A5A5A]" />
+                    <p className="text-sm font-bold text-[#0B3019]">{t("emailUs")}</p>
+                  </div>
+                  <form className="flex flex-col gap-2" onSubmit={(e) => {
+                    e.preventDefault();
+                    const emailInput = e.currentTarget.elements.namedItem('email') as HTMLInputElement;
+                    window.location.href = `mailto:${t("emailAddr")}?subject=Donation%20Assistance%20-%20${emailInput.value}`;
+                  }}>
+                    <input 
+                      type="email" 
+                      name="email"
+                      required
+                      placeholder={t("emailPlaceholder")}
+                      className="w-full text-sm px-4 py-2.5 rounded-lg border border-gray-200 outline-none focus:border-[#FFCC00] bg-white text-[#0B3019]"
+                    />
+                    <button type="submit" className="w-full bg-[#0B3019] hover:bg-[#154627] text-white text-sm font-bold py-2.5 rounded-lg transition-colors">
+                      {t("send")}
+                    </button>
+                  </form>
+                  <p className="text-xs text-center text-[#5A5A5A] mt-3">
+                    Or directly via <a href={`mailto:${t("emailAddr")}?subject=Donation%20Assistance`} className="text-[#FFCC00] font-bold hover:underline">{t("emailAddr")}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Impact Highlights with Dark Green Theme */}
-            <div className="bg-[#0B3019] rounded-3xl p-8 md:p-10 text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-[#0B3019] rounded-3xl p-8 text-white relative overflow-hidden shadow-2xl">
               {/* Decorative Background Elements */}
               <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#FFCC00]/15 rounded-full blur-3xl pointer-events-none"></div>
               <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
               
-              <h3 className="text-3xl font-bold mb-8 relative z-10" style={{ fontFamily: 'var(--font-fraunces)' }}>{t("impact1")} <span className="text-[#FFCC00]">{t("impact2")}</span></h3>
+              <h3 className="text-2xl font-bold mb-8 relative z-10" style={{ fontFamily: 'var(--font-fraunces)' }}>{t("impact1")} <span className="text-[#FFCC00]">{t("impact2")}</span></h3>
               
-              <ul className="space-y-8 relative z-10">
-                <li className="flex gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#FFCC00] flex items-center justify-center text-xl font-bold text-[#0B3019] shadow-inner">
+              <ul className="space-y-6 relative z-10">
+                <li className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#FFCC00] flex items-center justify-center text-lg font-bold text-[#0B3019] shadow-inner">
                     $25
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl mb-1 text-white">{t("meals")}</h4>
-                    <p className="text-white/70 text-base leading-relaxed">{t("mealsDesc")}</p>
+                    <h4 className="font-bold text-lg mb-1 text-white">{t("meals")}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{t("mealsDesc")}</p>
                   </div>
                 </li>
-                <li className="flex gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#FFCC00] flex items-center justify-center text-xl font-bold text-[#0B3019] shadow-inner">
+                <li className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#FFCC00] flex items-center justify-center text-lg font-bold text-[#0B3019] shadow-inner">
                     $50
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl mb-1 text-white">{t("eduKit")}</h4>
-                    <p className="text-white/70 text-base leading-relaxed">{t("eduKitDesc")}</p>
+                    <h4 className="font-bold text-lg mb-1 text-white">{t("eduKit")}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{t("eduKitDesc")}</p>
                   </div>
                 </li>
-                <li className="flex gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#FFCC00] flex items-center justify-center text-xl font-bold text-[#0B3019] shadow-inner">
+                <li className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#FFCC00] flex items-center justify-center text-lg font-bold text-[#0B3019] shadow-inner">
                     $100
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl mb-1 text-white">{t("healthcare")}</h4>
-                    <p className="text-white/70 text-base leading-relaxed">{t("healthcareDesc")}</p>
+                    <h4 className="font-bold text-lg mb-1 text-white">{t("healthcare")}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{t("healthcareDesc")}</p>
                   </div>
                 </li>
               </ul>
-            </div>
-
-            {/* Testimonial */}
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_4px_24px_rgba(26,26,26,0.04)] border border-[#0B3019]/5">
-              <div className="flex gap-1.5 text-[#FFCC00] mb-6">
-                {[1,2,3,4,5].map(i => <Heart key={i} size={18} fill="currentColor" className="text-[#FFCC00]" />)}
-              </div>
-              <p className="text-xl text-[#0B3019] font-medium leading-relaxed italic mb-8">
-                {t("testimonial")}
-              </p>
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-full bg-[#FFFDF5] flex items-center justify-center font-bold text-[#0B3019] text-xl border-2 border-[#FFCC00] shadow-sm">
-                  SM
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-[#0B3019]">{t("testimonialName")}</h4>
-                  <p className="text-[#5A5A5A] font-medium flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#FFCC00]"></span>
-                    {t("monthlyDonor")}
-                  </p>
-                </div>
-              </div>
             </div>
 
           </motion.div>

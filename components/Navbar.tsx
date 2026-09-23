@@ -39,7 +39,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
           <Image 
             src="/logo.jpg" 
             alt="COCOF Logo" 
@@ -48,30 +48,30 @@ export default function Navbar() {
             className="rounded-full object-cover shrink-0" 
           />
           <span
-            className="text-2xl font-bold tracking-tight transition-colors duration-300 text-ink"
+            className="text-xl xl:text-2xl font-bold tracking-tight transition-colors duration-300 text-ink"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
             COCOF
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
           {linkKeys.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-base font-bold transition-colors duration-200 text-muted hover:text-[#1B4B8F]"
+              className="text-sm xl:text-base font-bold transition-colors duration-200 text-muted hover:text-[#1B4B8F] whitespace-nowrap"
             >
               {t(l.key as any)}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-4 shrink-0">
           <Link
             href={pathname}
             locale={locale === 'en' ? 'fr' : 'en'}
-            className="inline-flex items-center gap-2 px-3 py-2 rounded text-base font-bold text-ink transition-colors duration-200 hover:text-[#1B4B8F]"
+            className="inline-flex items-center gap-1 xl:gap-2 px-2 xl:px-3 py-2 rounded text-sm xl:text-base font-bold text-ink transition-colors duration-200 hover:text-[#1B4B8F]"
             title={locale === 'en' ? 'Français' : 'English'}
           >
             <Globe size={18} />
@@ -79,13 +79,13 @@ export default function Navbar() {
           </Link>
           <Link
             href="/donate"
-            className="inline-flex items-center px-6 py-3 rounded text-base font-bold text-[#1B4B8F] bg-[#F3F7FC] transition-all duration-200 hover:bg-[#E2E8F0]"
+            className="inline-flex items-center px-4 xl:px-6 py-2 xl:py-3 rounded text-sm xl:text-base font-bold text-[#1B4B8F] bg-[#F3F7FC] transition-all duration-200 hover:bg-[#E2E8F0] whitespace-nowrap"
           >
             {t("donate")}
           </Link>
           <Link
             href="/get-involved"
-            className="inline-flex items-center px-6 py-3 rounded text-base font-bold text-white transition-all duration-200 hover:bg-[#153a70]"
+            className="inline-flex items-center px-4 xl:px-6 py-2 xl:py-3 rounded text-sm xl:text-base font-bold text-white transition-all duration-200 hover:bg-[#153a70] whitespace-nowrap"
             style={{ background: "#1B4B8F" }}
           >
             {t("getInvolved")}
@@ -93,7 +93,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-1 transition-colors duration-300 text-ink"
+          className="lg:hidden p-1 transition-colors duration-300 text-ink"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -108,7 +108,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-black/5 px-6 pb-6 pt-4"
+            className="lg:hidden bg-white border-t border-black/5 px-6 pb-6 pt-4"
           >
             <nav className="flex flex-col gap-4">
               {linkKeys.map((l) => (
