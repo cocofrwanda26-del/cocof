@@ -168,7 +168,7 @@ export default function DonatePage() {
               
               <div className="space-y-4">
                 <a 
-                  href="https://wa.me/250788000180" 
+                  href="https://wa.me/250788480161" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 transition-colors group"
