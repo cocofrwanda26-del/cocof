@@ -29,8 +29,8 @@ const partnersData = [
   { id: "mfpi", name: "MFPI", website: null, logo: "/logo/mfpi.png" },
   { id: "clecam", name: "CLECAM Ejo Heza Plc", website: null, logo: "/logo/clecam.png" },
   { id: "sacco", name: "Umurenge SACCO", website: null, logo: "/logo/sacco.png" },
-  { id: "duhamic", name: "DUHAMIC-ADRI", website: "https://www.duhamic.org.rw/", logo: "/logo/duhamic.png" },
-  { id: "duterimbere", name: "DUTERIMBERE", website: "https://duterimbere.org/", logo: "/logo/duterimbere.png" },
+  { id: "iita", name: "IITA (N2Africa)", website: null, logo: "/logo/iita.webp" },
+  { id: "dev", name: "Développement et Paix", website: null, logo: "/logo/dev.jpg" },
 ];
 
 const PartnerCard = ({ partner }: { partner: any }) => {

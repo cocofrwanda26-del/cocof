@@ -99,16 +99,16 @@ const partnersData: Partner[] = [
     logo: "/logo/sacco.png",
   },
   {
-    name: "DUHAMIC-ADRI",
-    role: "A strategic partner in operational activities and rural development efforts...",
-    website: "https://www.duhamic.org.rw/",
-    logo: "/logo/duhamic.png",
+    name: "IITA (N2Africa)",
+    role: "Starting around 2010, the International Institute of Tropical Agriculture (IITA) partnered with COCOF...",
+    website: null,
+    logo: "/logo/iita.webp",
   },
   {
-    name: "DUTERIMBERE",
-    role: "Collaborates closely within COCOF's broader partnership network...",
-    website: "https://duterimbere.org/",
-    logo: "/logo/duterimbere.png",
+    name: "Développement et Paix",
+    role: "One of COCOF’s earliest foundational partners following the 1994 Genocide against the Tutsi...",
+    website: null,
+    logo: "/logo/dev.jpg",
   },
 ];
 

@@ -198,8 +198,8 @@
     "mfpi": { "role": "Le COCOF a créé et soutient activement cette usine d'entreprise sociale inclusive, qui transforme le soja et le maïs pour relier les petits exploitants agricoles directement à l'ajout de valeur commerciale." },
     "clecam": { "role": "A signé un accord avec le COCOF en tant que Fonds de Garantie, permettant aux femmes et aux coopératives d'accéder à des prêts à un taux d'intérêt très préférentiel de 12 %." },
     "sacco": { "role": "Le COCOF a initié une microfinance locale qui a fusionné avec Umurenge SACCO Musambira pour relier les bénéficiaires aux services financiers, offrant des accords de garantie pour des prêts à 8 % d'intérêt." },
-    "duhamic": { "role": "Un partenaire stratégique dans les activités opérationnelles et les efforts de développement rural aux côtés du COCOF." },
-    "duterimbere": { "role": "Collabore étroitement au sein du réseau de partenariat plus large du COCOF, en plaidant pour un développement économique inclusif." }
+    "iita": { "role": "À partir d'environ 2010, l'Institut International d'Agriculture Tropicale (IITA) s'est associé au COCOF dans le cadre de l'initiative N2Africa financée par la Fondation Bill & Melinda Gates. Le projet a opéré sur 61 hectares de marais coopératifs et de parcelles à flanc de colline à Kamonyi. Il a introduit des variétés de légumineuses certifiées, des inoculants de rhizobium et des engrais minéraux. A formé des paysans relais communautaires, créé la plateforme de légumineuses de Karibanya et lié la multiplication des semences de haricots/soja directement à la certification du RAB tout en dirigeant les rendements céréaliers vers l'installation de transformation agroalimentaire du COCOF." },
+    "dev": { "role": "L'un des premiers partenaires fondateurs du COCOF après le génocide perpétré contre les Tutsi en 1994. Travaillant en alliance directe avec Trócaire et le réseau CIDSE, Développement et Paix a soutenu plus de 2 000 femmes rurales organisées au sein d'associations locales. Axé sur la guérison sociale post-conflit à la base, la participation civique des femmes, l'alphabétisation des adultes et la mobilisation communautaire grâce à la méthode DELTA, ainsi qu'à la formation de base des groupes d'épargne et de crédit. A également accueilli des visites d'échange de solidarité bilatérales canadiennes." }
   },
   "Programs": {
     "title": "Six Piliers de la Transformation",
@@ -368,6 +368,86 @@
     "deliveryApproaches2": "de Mise en Œuvre.",
     "deliveryDesc": "Des cadres opérationnels exclusifs qui transforment la vision en une transformation communautaire tangible.",
     "learnMore": "En savoir plus",
+    "historyTitle": "L'histoire complète",
+    "historySubtitle": "Découvrez notre parcours, notre gouvernance et nos cadres opérationnels.",
+    "readMoreHistory": "Lire l'histoire complète",
+    "showLessHistory": "Voir moins",
+    "historySections": {
+      "roots": {
+        "title": "Racines Fondamentales et Évolution Historique",
+        "content": "Le Conseil Consultatif des Femmes (COCOF) a été fondé en décembre 1994 par des femmes rurales de la Province du Sud du Rwanda. Créée au lendemain du génocide de 1994 perpétré contre les Tutsi, l'organisation est apparue comme une réponse locale à la dévastation socio-économique aiguë, à la pauvreté généralisée et à l'afflux soudain de ménages dirigés par des femmes portant le fardeau principal de la reconstruction communautaire. Depuis son siège social dans le secteur de Musambira, district de Kamonyi, le COCOF a mobilisé les femmes au niveau du village, passant de rassemblements de solidarité informels à une plate-forme de la société civile structurée vouée à garantir des droits économiques, sociaux et civiques égaux pour les femmes."
+      },
+      "legal": {
+        "title": "Accréditation Légale et Cadre de Gouvernance",
+        "content": "Le COCOF fonctionne comme une organisation non gouvernementale légalement enregistrée et reconnue par le Rwanda Governance Board (RGB). L'organisation a été officiellement accréditée en vertu de l'arrêté ministériel n° 073/11 du 12/12/2002 (publié au Journal officiel n° 22 de novembre 2003) et maintient une conformité légale totale avec la loi n° 058/2024 du 20/06/2024 régissant les organisations non gouvernementales au Rwanda. Dirigé par une Assemblée Générale et un Comité Exécutif - en plus de mécanismes d'audit interne stricts - le COCOF maintient la responsabilité institutionnelle, une gestion financière transparente et la conformité aux politiques nationales, y compris la Vision 2050 du Rwanda, la Stratégie Nationale de Transformation (NST2) et les cadres de développement internationaux."
+      },
+      "footprint": {
+        "title": "Empreinte Géographique et Portée Démographique",
+        "content": "Sur trois décennies de présence communautaire continue, le COCOF a étendu son empreinte opérationnelle du district de Kamonyi pour couvrir cinq districts à travers le Rwanda : Kamonyi, Muhanga, Ruhango et Nyamagabe dans la province du Sud, ainsi que Ngororero dans la province de l'Ouest. À ce jour, l'organisation a directement atteint plus de 11 000 bénéficiaires principaux, les femmes représentant plus de 71 % de tous les participants au programme. Les interventions intègrent intentionnellement des groupes historiquement exclus, notamment des jeunes survivant en dessous du seuil de pauvreté, des mères célibataires et des personnes handicapées, garantissant ainsi l'inclusion sociale à l'échelle de la communauté."
+      },
+      "models": {
+        "title": "Innovation Méthodologique et Modèles Économiques",
+        "content": "La méthodologie de terrain du COCOF se concentre sur des modèles de prestation durables et autonomes plutôt que sur des secours à court terme :\n\n• Dynamique de genre au sein des ménages (GALS) : Mettant en œuvre le système d'apprentissage et d'action pour les genres comme cadre opérationnel de base, le COCOF utilise des outils sous forme de diagrammes qui permettent aux conjoints de co-créer des plans financiers conjoints, de redistribuer le travail de soins non rémunéré, de prévenir les conflits conjugaux et de sécuriser la propriété foncière conjointe.\n\n• Accès aux capitaux et fonds de garantie : Au-delà de l'épargne informelle, le COCOF organise les femmes rurales en communautés d'épargne et de crédit interne (SILC) structurées et les relie au crédit formel via des fonds de garantie de partage des risques. En partenariat avec la SACCO Kaduha, la SACCO Jyambere Kamonyi et le CLECAM Ejo Heza, les agriculteurs soutenus par le COCOF accèdent à des fonds de roulement commerciaux à des taux négociés de 8 % à 12 %.\n\n• Vulgarisation agronomique à la base : La capacité technique est maintenue par un réseau de 30 paysans formateurs certifiés (Maîtres-Fermiers) établissant des sites de démonstration pour des semences intelligentes face au climat et la gestion de la fertilité des sols.\n\n• Achat de chaînes de valeur industrielles (MFPI) : Par le biais de son entreprise sociale commerciale (MFPI), le COCOF relie directement les coopératives aux marchés industriels de gros pour transformer les récoltes de maïs et de soja en produits de grande valeur.\n\n• Sécurité nutritionnelle et transformation des aliments : Au niveau des villages, le COCOF associe la production agricole à la santé communautaire par des campagnes de nutrition pour réduire le retard de croissance infantile."
+      },
+      "partnerships": {
+        "title": "Partenariats Stratégiques et Bilan de Gestion des Subventions",
+        "content": "Les programmes du COCOF sont soutenus par des partenariats institutionnels de longue date avec des donateurs multilatéraux, bilatéraux et internationaux non gouvernementaux. L'organisation a exécuté avec succès des portefeuilles pluriannuels de grande valeur financés par l'Union européenne, Irish Aid, USAID, Oxfam, SCIAF, Trócaire et Comic Relief. Opérant en étroite coordination technique avec les administrations des districts locaux, l'Office Rwandais de Développement de l'Agriculture (RAB) et des réseaux nationaux de la société civile, le COCOF continue de traduire les subventions institutionnelles en une résilience communautaire générationnelle mesurable."
+      }
+    },
+    "valuesTitle": "Valeurs Fondamentales",
+    "valuesIntro": "Enracinées dans la charte fondatrice du COCOF, le Système d'Apprentissage et d'Action pour les Genres (GALS) et la gouvernance coopérative de base, ces cinq valeurs fondamentales guident les opérations institutionnelles et les engagements sur le terrain.",
+    "valuesList": {
+      "equality": {
+        "title": "Égalité des Sexes et Droits Humains",
+        "desc": "Faire progresser l'égale dignité, la prise de décision partagée au sein du ménage et la parité des droits économiques et politiques entre les femmes et les hommes."
+      },
+      "inclusivity": {
+        "title": "Inclusion et Justice Sociale",
+        "desc": "Veiller à ce que les interventions atteignent délibérément les plus vulnérables, y compris les ménages ruraux dirigés par des femmes, les jeunes non scolarisés et les personnes handicapées."
+      },
+      "integrity": {
+        "title": "Intégrité et Responsabilité Mutuelle",
+        "desc": "Maintenir une gestion financière transparente, une gouvernance coopérative démocratique et une conformité rigoureuse dans toute la gestion des subventions des partenaires."
+      },
+      "selfReliance": {
+        "title": "Autonomie Économique",
+        "desc": "Favoriser la dignité de la communauté en faisant passer les ménages ruraux de la dépendance à court terme à une agro-industrie productive, à une épargne interne et à la propriété durable d'entreprises."
+      },
+      "environment": {
+        "title": "Gérance de l'Environnement et du Climat",
+        "desc": "Défendre une agriculture régénératrice et intelligente face au climat, la protection des sols et la conservation des ressources naturelles pour sauvegarder les moyens de subsistance des générations futures."
+      }
+    },
+    "objectivesTitle": "Objectifs Stratégiques",
+    "objectivesIntro": "Ces six objectifs stratégiques représentent les piliers institutionnels du COCOF, définissant la portée et les cibles mesurables de toutes les interventions organisationnelles à travers le Rwanda.",
+    "objectivesList": {
+      "womensEconomic": {
+        "title": "Autonomisation Économique des Femmes et Inclusion Financière",
+        "desc": "Élargir l'accès des femmes aux actifs productifs, à l'incubation d'entreprises, aux groupes d'épargne informels SILC et au crédit de microfinance préférentiel pour renforcer la sécurité des ménages."
+      },
+      "sustainableAg": {
+        "title": "Agriculture Durable et Sécurité Alimentaire",
+        "desc": "Moderniser la production des petits exploitants grâce à des pratiques agricoles intelligentes face au climat, des systèmes de semences communautaires et des initiatives pratiques de nutrition."
+      },
+      "cooperativeDev": {
+        "title": "Développement des Coopératives et Accès au Marché",
+        "desc": "Renforcer la gouvernance démocratique, la littératie financière et la capacité d'agrégation commerciale dans les coopératives rurales pour garantir des contrats institutionnels."
+      },
+      "genderEquality": {
+        "title": "Égalité des Sexes, Leadership Féminin et Inclusion Sociale",
+        "desc": "Démanteler les normes socioculturelles discriminatoires par le biais du GALS, promouvoir l'égalité de propriété des actifs et faire progresser les femmes vers des rôles de direction."
+      },
+      "climateResilience": {
+        "title": "Résilience Climatique et Durabilité Environnementale",
+        "desc": "Protéger les bassins versants et les terres agricoles vallonnées grâce à des infrastructures de conservation des sols, des contours d'agroforesterie et des certifications d'agriculture biologique."
+      },
+      "youthDev": {
+        "title": "Développement des Jeunes, Emploi et Protection Sociale",
+        "desc": "Doter les jeunes non scolarisés et vulnérables de compétences techniques axées sur le marché, de connaissances financières et d'outils d'entrepreneuriat pour faciliter leur placement professionnel."
+      }
+    },
+    "exploreValues": "Explorer Nos Valeurs",
+    "exploreObjectives": "Explorer Nos Objectifs",
     "visionaries": "Les Visionnaires",
     "visionariesDesc": "Les esprits résilients qui font avancer notre mission.",
     "execSecretariat": "Secrétariat Exécutif",

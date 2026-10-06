@@ -87,7 +87,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-base text-white/70">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-[#E8B01C]" />
-                <span>Musambira Sector, Kamonyi District, Southern Province, Rwanda</span>
+                <span>PO BOX 01 Muhanga, Rwanda</span>
               </li>
             </ul>
           </div>

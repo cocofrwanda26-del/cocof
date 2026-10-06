@@ -26,7 +26,7 @@ function AnimatedNumber({ value, suffix = "" }: { value: number, suffix?: string
 }
 
 const stats = [
-  { id: "women", value: 1000, suffix: "+", icon: Users, color: "text-[#1B4B8F]", bg: "bg-[#1B4B8F]/10" },
+  { id: "women", value: 594, suffix: "", icon: Users, color: "text-[#1B4B8F]", bg: "bg-[#1B4B8F]/10" },
   { id: "beneficiaries", value: 20000, suffix: "+", icon: Globe, color: "text-[#12422C]", bg: "bg-[#12422C]/10" },
   { id: "focus", value: 6, suffix: "", icon: Target, color: "text-[#0F2B5B]", bg: "bg-[#0F2B5B]/10" },
   { id: "years", value: 32, suffix: "", icon: CalendarHeart, color: "text-[#E8B01C]", bg: "bg-[#E8B01C]/20" },

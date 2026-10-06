@@ -104,7 +104,7 @@ export default function HomeAbout() {
               className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
               {[
-                { value: "1000+", label: t("stats.women") },
+                { value: "594", label: t("stats.women") },
                 { value: "20k+", label: t("stats.beneficiaries") },
                 { value: "6", label: t("stats.focus") },
                 { value: "32", label: t("stats.years") }

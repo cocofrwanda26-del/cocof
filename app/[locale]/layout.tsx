@@ -21,7 +21,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cocof.org.rw"),
   title: {
-    default: "COCOF Rwanda — Women's Advisory Council",
+    default: "COCOF Rwanda — Conseil Consultatif des Femmes",
     template: "%s | COCOF Rwanda",
   },
   description:
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   manifest: "/icon/site.webmanifest",
   openGraph: {
-    title: "COCOF Rwanda — Women's Advisory Council",
+    title: "COCOF Rwanda — Conseil Consultatif des Femmes",
     description:
       "Empowering Rwandan Women Through Agriculture, Equity, and Opportunity.",
     url: "https://cocof.org.rw",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "COCOF Rwanda — Women's Advisory Council",
+    title: "COCOF Rwanda — Conseil Consultatif des Femmes",
     description: "Empowering Rwandan Women Through Agriculture, Equity, and Opportunity.",
   },
   robots: {

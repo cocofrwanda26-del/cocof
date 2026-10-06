@@ -198,8 +198,8 @@
     "mfpi": { "role": "COCOF established and actively supports this inclusive social enterprise plant, which processes Soya and Maize to link smallholder farmers directly to commercial value addition." },
     "clecam": { "role": "Signed an agreement with COCOF as a Guarantee Fund, allowing women and cooperatives to access loans at a highly preferential 12% interest rate." },
     "sacco": { "role": "COCOF initiated a local microfinance that merged with Umurenge SACCO Musambira to link beneficiaries to financial services, offering guarantee agreements for 8% interest loans." },
-    "duhamic": { "role": "A strategic partner in operational activities and rural development efforts alongside COCOF." },
-    "duterimbere": { "role": "Collaborates closely within COCOF's broader partnership network, advocating for inclusive economic development." }
+    "iita": { "role": "Starting around 2010, the International Institute of Tropical Agriculture (IITA) partnered with COCOF under the Bill & Melinda Gates Foundation-funded N2Africa initiative. The project operated across 61 hectares of cooperative marshlands and hillside plots in Kamonyi. It introduced certified legume varieties, rhizobium inoculants, and mineral fertilizers. Trained community lead farmers, established the Karibanya Legume Platform, and linked bean/soybean seed multiplication directly to RAB certification while directing grain yields to COCOF’s agro-processing facility." },
+    "dev": { "role": "One of COCOF’s earliest foundational partners following the 1994 Genocide against the Tutsi. Working in direct alliance with Trócaire and the CIDSE network, Développement et Paix supported more than 2,000 rural women organized across local associations. Focused on grassroots post-conflict social healing, women's civic participation, adult literacy, and community mobilization through the DELTA method, alongside foundational savings-and-credit group training. Also hosted bilateral Canadian solidarity exchange visits." }
   },
   "Programs": {
     "title": "Six Pillars of Transformation",
@@ -368,6 +368,86 @@
     "deliveryApproaches2": "Approaches.",
     "deliveryDesc": "Proprietary operational frameworks that turn vision into tangible community transformation.",
     "learnMore": "Learn more",
+    "historyTitle": "The Complete Story",
+    "historySubtitle": "Uncover our journey, governance, and operational frameworks.",
+    "readMoreHistory": "Read Full History",
+    "showLessHistory": "Show Less",
+    "historySections": {
+      "roots": {
+        "title": "Foundational Roots & Historical Evolution",
+        "content": "Conseil Consultatif des Femmes (COCOF) was founded in December 1994 by rural women in the Southern Province of Rwanda. Established in the aftermath of the 1994 Genocide against the Tutsi, the organization emerged as a grassroots response to acute socio-economic devastation, widespread poverty, and the sudden influx of female-headed households bearing the primary burden of community reconstruction. From its headquarters in Musambira Sector, Kamonyi District, COCOF mobilized women at the village level, transitioning from informal solidarity gatherings into a structured civil society platform dedicated to securing equal economic, social, and civic rights for women."
+      },
+      "legal": {
+        "title": "Legal Accreditation & Governance Framework",
+        "content": "COCOF operates as a legally registered Non-Governmental Organization recognized by the Rwanda Governance Board (RGB). The organization was formally accredited under Ministerial Order No. 073/11 of 12/12/2002 (published in Official Gazette No. 22 of November 2003) and maintains full legal compliance with Law No. 058/2024 of 20/06/2024 governing Non-Governmental Organizations in Rwanda. Governed by a General Assembly and an Executive Committee—alongside strict internal audit mechanisms—COCOF maintains institutional accountability, transparent financial management, and compliance with national policies, including Rwanda’s Vision 2050, the National Strategy for Transformation (NST2), and international development frameworks."
+      },
+      "footprint": {
+        "title": "Geographic Footprint & Demographic Reach",
+        "content": "Over three decades of continuous community presence, COCOF expanded its operational footprint from Kamonyi District to cover five districts across Rwanda: Kamonyi, Muhanga, Ruhango, and Nyamagabe in the Southern Province, as well as Ngororero in the Western Province. To date, the organization has directly reached more than 11,000 primary beneficiaries, with women comprising over 71% of all program participants. Interventions intentionally integrate historically excluded groups, including youth surviving below the poverty line, single mothers, and Persons with Disabilities (PWDs), ensuring community-wide social inclusion."
+      },
+      "models": {
+        "title": "Methodological Innovation & Economic Models",
+        "content": "COCOF's field methodology centers on sustainable, self-reliant delivery models rather than short-term relief:\n\n• Household Gender Dynamics (GALS): Implementing the Gender Action Learning System as a core operational framework, COCOF utilizes diagrammatic tools that enable literate and non-literate spouses to co-create joint financial plans, redistribute unpaid care work, prevent gender-based domestic conflict, and secure joint land titling.\n\n• Capital Access & Guarantee Funds: Moving beyond informal savings, COCOF organizes rural women into structured Savings and Internal Lending Communities (SILC) and bridges them to formal credit through institutional risk-sharing guarantee funds. In partnership with SACCO Kaduha, SACCO Jyambere Kamonyi, and CLECAM Ejo Heza, COCOF-backed farmers access commercial working capital at negotiated rates of 8% to 12%, bypassing conventional 24% market interest barriers.\n\n• Grassroots Agronomic Extension: Community-level technical capacity is sustained through a permanent network of 30 certified Farmer Trainers (Maîtres-Fermiers). Operating as decentralized extension agents across Kamonyi District, these trainers establish field demonstration sites for climate-smart seed varieties, integrated pest management, organic soil fertility, and post-harvest drying protocols.\n\n• Industrial Value Chain Off-Taking (MFPI): Through its commercial social enterprise, the Muhanga Food Processing Industries (MFPI), COCOF links supported cooperatives directly to bulk industrial markets. MFPI provides standardized grain grading, moisture control, and aggregation facilities, transforming raw maize and soybean harvests into high-value processed commodities such as fortified composite flours.\n\n• Nutritional Security & Food Transformation: At the village level, COCOF links agricultural production to community health through hands-on nutrition campaigns across sectors like Musambira, Nyarubaka, Rukoma, and Karama. Families are trained to process raw soybeans into nutritious soy milk, fresh tofu, and high-protein boulettes (fritters), actively reducing early childhood stunting and providing households with surplus artisanal products for local markets."
+      },
+      "partnerships": {
+        "title": "Strategic Partnerships & Grant Management Track Record",
+        "content": "COCOF’s programs are backed by long-standing institutional partnerships with multilateral, bilateral, and international non-governmental donors. The organization has successfully executed high-value, multi-year portfolios funded by the European Union (such as the 903 Million RWF Horticulture Value Chain Project), Irish Aid, USAID (via the Huguka Dukore Youth Employment consortium), Oxfam, SCIAF, Trócaire, and Comic Relief. Operating in close technical coordination with local district administrations, the Rwanda Agriculture and Animal Resources Development Board (RAB), and national civil society networks like Pro-Femmes Twese Hamwe, COCOF continues to translate institutional grants into measurable, generational community resilience."
+      }
+    },
+    "valuesTitle": "Core Values",
+    "valuesIntro": "Rooted in COCOF’s founding charter, the Gender Action Learning System (GALS), and grassroots cooperative governance, these five core values guide institutional operations and field engagements.",
+    "valuesList": {
+      "equality": {
+        "title": "Gender Equality & Human Rights",
+        "desc": "Advancing equal dignity, shared household decision-making, and parity in economic and political rights between women and men."
+      },
+      "inclusivity": {
+        "title": "Inclusivity & Social Justice",
+        "desc": "Ensuring that interventions deliberately reach the most vulnerable, including rural female-headed households, out-of-school youth, and Persons with Disabilities (PWDs)."
+      },
+      "integrity": {
+        "title": "Integrity & Mutual Accountability",
+        "desc": "Upholding transparent financial stewardship, democratic cooperative governance, and rigorous compliance in all partner grant management."
+      },
+      "selfReliance": {
+        "title": "Economic Self-Reliance",
+        "desc": "Fostering community dignity by transitioning rural households from short-term dependency toward productive agribusiness, internal savings, and sustainable enterprise ownership."
+      },
+      "environment": {
+        "title": "Environmental & Climate Stewardship",
+        "desc": "Championing regenerative, climate-smart farming, soil protection, and natural resource conservation to safeguard livelihoods for future generations."
+      }
+    },
+    "objectivesTitle": "Strategic Objectives",
+    "objectivesIntro": "These six strategic objectives represent COCOF’s institutional pillars, defining the scope and measurable targets of all organizational interventions across Rwanda.",
+    "objectivesList": {
+      "womensEconomic": {
+        "title": "Women’s Economic Empowerment & Financial Inclusion",
+        "desc": "Expanding women’s access to productive assets, entrepreneurship incubation, informal SILC savings groups, and preferential microfinance credit to build resilient household security."
+      },
+      "sustainableAg": {
+        "title": "Sustainable Agriculture & Food Security",
+        "desc": "Modernizing smallholder production through climate-smart farming practices, community seed systems, and practical household nutrition initiatives to eliminate child stunting and chronic malnutrition."
+      },
+      "cooperativeDev": {
+        "title": "Cooperative Development & Market Access",
+        "desc": "Building democratic governance, financial literacy, and commercial aggregation capacity in rural cooperatives to secure institutional contracts and direct linkages to processing industries like MFPI."
+      },
+      "genderEquality": {
+        "title": "Gender Equality, Women’s Leadership & Social Inclusion",
+        "desc": "Dismantling discriminatory socio-cultural norms through GALS, promoting equal asset ownership, and advancing women into elected leadership roles within cooperatives and local governance."
+      },
+      "climateResilience": {
+        "title": "Climate Resilience & Environmental Sustainability",
+        "desc": "Protecting watersheds and hilly farmland through soil conservation infrastructure, agroforestry contouring, rainwater harvesting installations, and organic agriculture certifications."
+      },
+      "youthDev": {
+        "title": "Youth Development, Employment & Social Protection",
+        "desc": "Equipping out-of-school and vulnerable youth with market-driven technical skills, financial literacy, and entrepreneurship toolkits to facilitate job placement across high-value agri-value chains."
+      }
+    },
+    "exploreValues": "Explore Our Values",
+    "exploreObjectives": "Explore Our Objectives",
     "visionaries": "The Visionaries",
     "visionariesDesc": "The resilient minds driving our mission forward.",
     "execSecretariat": "Executive Secretariat",

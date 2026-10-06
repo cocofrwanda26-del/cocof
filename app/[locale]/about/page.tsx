@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Shield, Users, Target, Landmark, Leaf, Briefcase, Network, Sparkles, Eye, Scale, ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { Shield, Users, Target, Landmark, Leaf, Briefcase, Network, Sparkles, Eye, Scale, ArrowRight, BookOpen, ChevronDown, ChevronUp, Heart } from "lucide-react";
+import { useRef, useState } from "react";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { APPROACHES } from "@/data/approaches";
@@ -11,6 +11,8 @@ import { useTranslations } from "next-intl";
 export default function AboutPage() {
   const t = useTranslations("AboutPage");
   const tApproaches = useTranslations("ApproachesData");
+  const [showHistory, setShowHistory] = useState(false);
+  const [activeCard, setActiveCard] = useState<'values' | 'objectives' | null>(null);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [30, -30]);
@@ -121,6 +123,95 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Comprehensive History & Details - Expandable */}
+      <section className="py-12 bg-[#FAFAFA] relative border-b border-gray-100 z-10">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="flex flex-col items-center text-center">
+            <button 
+              onClick={() => setShowHistory(!showHistory)}
+              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#1E3A8A] text-white rounded-full font-bold shadow-[0_10px_30px_rgba(30,58,138,0.2)] hover:shadow-[0_20px_40px_rgba(30,58,138,0.3)] hover:-translate-y-1 transition-all duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-[#2F6B3A] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
+              <span className="relative z-10 flex items-center gap-2 tracking-wide uppercase text-sm">
+                <BookOpen className="w-5 h-5" />
+                {showHistory ? t("showLessHistory") : t("readMoreHistory")}
+              </span>
+              <span className="relative z-10">
+                {showHistory ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+              </span>
+            </button>
+            <AnimatePresence>
+              {!showHistory && (
+                <motion.p 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="mt-6 text-sm text-[#1A1A1A]/50 font-semibold max-w-sm"
+                >
+                  {t("historySubtitle")}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <AnimatePresence>
+            {showHistory && (
+              <motion.div 
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="overflow-hidden mt-12"
+              >
+                <div className="bg-white rounded-[32px] p-8 md:p-12 shadow-[0_20px_60px_rgba(30,58,138,0.06)] border border-[#1E3A8A]/5 mb-4">
+                  <div className="flex flex-col items-center text-center mb-12">
+                    <div className="w-16 h-1 bg-[#F5B400] rounded-full mb-6" />
+                    <h2 className="text-3xl md:text-5xl font-black text-[#1A1A1A]" style={{ fontFamily: "var(--font-fraunces)" }}>
+                      {t("historyTitle")}
+                    </h2>
+                  </div>
+                  
+                  <div className="space-y-12 md:space-y-16">
+                    {['roots', 'legal', 'footprint', 'models', 'partnerships'].map((key, idx) => (
+                      <motion.div 
+                        key={key}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ delay: 0.1 * idx, duration: 0.6 }}
+                        className="relative pl-6 md:pl-10 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-1.5 before:bg-gradient-to-b before:from-[#2F6B3A] before:to-transparent before:rounded-full"
+                      >
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#1E3A8A] mb-5" style={{ fontFamily: "var(--font-fraunces)" }}>
+                          {t(`historySections.${key}.title` as any)}
+                        </h3>
+                        <div className="text-[#1A1A1A]/70 text-base md:text-lg leading-relaxed font-medium space-y-4">
+                          {t(`historySections.${key}.content` as any).split('\n').map((paragraph: string, i: number) => (
+                            <p key={i}>{paragraph}</p>
+                          ))}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  {/* Bottom close CTA */}
+                  <div className="mt-16 pt-8 border-t border-gray-100 flex justify-center">
+                    <button 
+                      onClick={() => {
+                        setShowHistory(false);
+                        window.scrollTo({ top: containerRef.current ? (containerRef.current as any).offsetTop : 0, behavior: 'smooth' });
+                      }}
+                      className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E3A8A]/5 text-[#1E3A8A] font-bold hover:bg-[#1E3A8A] hover:text-white transition-all duration-300"
+                    >
+                      <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" /> {t("showLessHistory")}
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </section>
+
       {/* Vision & Mission - Solid High Impact Blocks */}
       <section className="py-16 px-6 relative bg-white">
         <div className="max-w-7xl mx-auto">
@@ -155,6 +246,117 @@ export default function AboutPage() {
                   {t("missionText")}
                 </p>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values & Strategic Objectives - Interactive Expandable Cards */}
+      <section className="pb-16 px-6 relative bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Core Values Card */}
+            <motion.div 
+              {...fadeIn}
+              className="flex flex-col rounded-[24px] bg-[#FAFAFA] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            >
+              <button 
+                onClick={() => setActiveCard(activeCard === 'values' ? null : 'values')}
+                className="w-full flex items-center justify-between p-6 lg:p-8 text-left group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-[#1E3A8A]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Heart className="w-6 h-6 text-[#1E3A8A]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#1A1A1A]" style={{ fontFamily: "var(--font-fraunces)" }}>
+                    {t("exploreValues")}
+                  </h3>
+                </div>
+                <div className="bg-white p-2 rounded-full shadow-sm">
+                  {activeCard === 'values' ? <ChevronUp className="w-5 h-5 text-[#1E3A8A]" /> : <ChevronDown className="w-5 h-5 text-[#1E3A8A]" />}
+                </div>
+              </button>
+
+              <AnimatePresence>
+                {activeCard === 'values' && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="overflow-hidden bg-white border-t border-gray-100"
+                  >
+                    <div className="p-6 lg:p-8 pt-6">
+                      <p className="text-[#1A1A1A]/70 mb-8 font-medium leading-relaxed">{t("valuesIntro")}</p>
+                      <div className="space-y-6">
+                        {['equality', 'inclusivity', 'integrity', 'selfReliance', 'environment'].map((key) => (
+                          <div key={key} className="flex gap-4">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#F5B400]/20 flex items-center justify-center mt-1">
+                              <Sparkles className="w-4 h-4 text-[#F5B400]" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-bold text-[#1E3A8A] mb-1">{t(`valuesList.${key}.title` as any)}</h4>
+                              <p className="text-[#1A1A1A]/70 text-sm leading-relaxed font-medium">{t(`valuesList.${key}.desc` as any)}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Strategic Objectives Card */}
+            <motion.div 
+              {...fadeIn}
+              className="flex flex-col rounded-[24px] bg-[#FAFAFA] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            >
+              <button 
+                onClick={() => setActiveCard(activeCard === 'objectives' ? null : 'objectives')}
+                className="w-full flex items-center justify-between p-6 lg:p-8 text-left group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-[#2F6B3A]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Target className="w-6 h-6 text-[#2F6B3A]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#1A1A1A]" style={{ fontFamily: "var(--font-fraunces)" }}>
+                    {t("exploreObjectives")}
+                  </h3>
+                </div>
+                <div className="bg-white p-2 rounded-full shadow-sm">
+                  {activeCard === 'objectives' ? <ChevronUp className="w-5 h-5 text-[#2F6B3A]" /> : <ChevronDown className="w-5 h-5 text-[#2F6B3A]" />}
+                </div>
+              </button>
+
+              <AnimatePresence>
+                {activeCard === 'objectives' && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="overflow-hidden bg-white border-t border-gray-100"
+                  >
+                    <div className="p-6 lg:p-8 pt-6">
+                      <p className="text-[#1A1A1A]/70 mb-8 font-medium leading-relaxed">{t("objectivesIntro")}</p>
+                      <div className="space-y-6">
+                        {['womensEconomic', 'sustainableAg', 'cooperativeDev', 'genderEquality', 'climateResilience', 'youthDev'].map((key) => (
+                          <div key={key} className="flex gap-4">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#2F6B3A]/10 flex items-center justify-center mt-1">
+                              <Target className="w-4 h-4 text-[#2F6B3A]" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-bold text-[#2F6B3A] mb-1">{t(`objectivesList.${key}.title` as any)}</h4>
+                              <p className="text-[#1A1A1A]/70 text-sm leading-relaxed font-medium">{t(`objectivesList.${key}.desc` as any)}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           </div>
         </div>
